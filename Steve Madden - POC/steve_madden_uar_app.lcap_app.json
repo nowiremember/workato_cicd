@@ -1,0 +1,135 @@
+{
+  "name": "Steve Madden - UAR App",
+  "creation_page": {
+    "zip_name": "Steve Madden - POC/submit_request_in_new_workflow_app.lcap_page.json",
+    "name": "Submit request in New workflow app",
+    "folder": "Steve Madden - POC"
+  },
+  "workato_db_table": {
+    "zip_name": "Steve Madden - POC/steve_madden_poc_uar_app.workato_db_table.json",
+    "name": "Steve Madden POC - UAR App",
+    "folder": "Steve Madden - POC"
+  },
+  "workflow_stages": [
+    {
+      "name": "New",
+      "color": 0
+    },
+    {
+      "name": "Review POC 1",
+      "color": 1,
+      "page": {
+        "zip_name": "Steve Madden - POC/user_access_review_poc_1.lcap_page.json",
+        "name": "User Access Review POC 1",
+        "folder": "Steve Madden - POC"
+      }
+    },
+    {
+      "name": "Review POC 2",
+      "color": 0,
+      "page": {
+        "zip_name": "Steve Madden - POC/user_access_review_poc_2.lcap_page.json",
+        "name": "User Access Review POC 2",
+        "folder": "Steve Madden - POC"
+      }
+    },
+    {
+      "name": "Service Now",
+      "color": 4
+    },
+    {
+      "name": "Access Confirmation",
+      "color": 1,
+      "page": {
+        "zip_name": "Steve Madden - POC/confirmation.lcap_page.json",
+        "name": "Confirmation",
+        "folder": "Steve Madden - POC"
+      }
+    },
+    {
+      "name": "Done",
+      "color": 2
+    },
+    {
+      "name": "Canceled",
+      "color": 3
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Workflow requests",
+      "kind": "new_request",
+      "visibility": "all"
+    }
+  ],
+  "displayed_columns": [
+    {
+      "id": "c6590a5b-4742-412a-8259-5de5f5d8099a",
+      "visibility": "all"
+    },
+    {
+      "id": "fdedd934-314e-4e60-8b80-44078f05f58b",
+      "visibility": "nobody"
+    },
+    {
+      "id": "71668813-43aa-46e2-aa84-bf6212935f70",
+      "visibility": "nobody"
+    },
+    {
+      "id": "f3176538-7d18-4d57-8990-997cc9d8a2f2",
+      "visibility": "nobody"
+    },
+    {
+      "id": "4bfbc9de-7902-48ce-93a4-336013ce5600",
+      "visibility": "nobody"
+    },
+    {
+      "id": "3cf26c41-b8f6-4d23-81b1-d4462b5dc04c",
+      "visibility": "nobody"
+    },
+    {
+      "id": "179205b6-ad7f-4876-8bee-4444d8211f50",
+      "visibility": "nobody"
+    },
+    {
+      "id": "ff351c13-aa66-40fd-80ef-b50e70eb6b92",
+      "visibility": "nobody"
+    },
+    {
+      "id": "3c6e1263-dfe7-4776-8d17-4dad8362e5f1",
+      "visibility": "nobody"
+    },
+    {
+      "id": "eec82a54-1dd8-4c64-afd4-1fc02bee61b5",
+      "visibility": "nobody"
+    },
+    {
+      "id": "CURRENT_STAGE",
+      "visibility": "all"
+    },
+    {
+      "id": "CURRENT_TASK",
+      "visibility": "all"
+    },
+    {
+      "id": "ASSIGNED_TO",
+      "visibility": "nobody"
+    },
+    {
+      "id": "EXPIRES_AT",
+      "visibility": "all"
+    },
+    {
+      "id": "CREATED_BY",
+      "visibility": "nobody"
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "visibility": "all"
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "visibility": "nobody"
+    }
+  ]
+}

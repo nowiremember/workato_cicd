@@ -1,0 +1,416 @@
+{
+  "name": "Submit request in New workflow app",
+  "path": "submit-request-in-new-workflow-app",
+  "content": {
+    "type": "common",
+    "maxWidth": "fixed",
+    "background": {
+      "style": "pattern",
+      "pattern": "light-2"
+    },
+    "variables": [
+
+    ],
+    "handlers": {
+      "pageLoad": null
+    },
+    "layout": [
+      1,
+      [
+        {
+          "type": "container",
+          "id": "6a665eeb",
+          "name": "Main container",
+          "x": 1,
+          "width": 10,
+          "visible": true,
+          "layout": [
+            1,
+            [
+              {
+                "type": "container",
+                "id": "47feab68",
+                "name": "Form container",
+                "x": 0,
+                "width": 12,
+                "visible": true,
+                "layout": [
+                  1,
+                  [
+                    {
+                      "type": "text",
+                      "id": "dc1c11b7",
+                      "name": "Form title",
+                      "x": 0,
+                      "width": 12,
+                      "visible": true,
+                      "text": "# 🚀 Submit request in New workflow app\nUse this form to submit a request in New workflow app.",
+                      "alignment": "left",
+                      "color": "#24434f"
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "divider",
+                      "id": "dfb612e8",
+                      "name": "Divider",
+                      "x": 0,
+                      "width": 12,
+                      "visible": true,
+                      "backgroundColor": "#ced5db"
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "input",
+                      "id": "9e214d72",
+                      "name": "Employee Number",
+                      "x": 0,
+                      "width": 10,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Employee Number",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        }
+                      },
+                      "label": "Employee Number",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text"
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "input",
+                      "id": "994b0d68",
+                      "name": "Employee Name",
+                      "x": 0,
+                      "width": 10,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Employee Name",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      },
+                      "label": "Employee Name",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text"
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "input",
+                      "id": "0d42f969",
+                      "name": "Employee Email",
+                      "x": 0,
+                      "width": 7,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Employee Email",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        }
+                      },
+                      "label": "Employee Email",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text"
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "dropdown",
+                      "id": "4eac3156",
+                      "name": "Request Type",
+                      "x": 0,
+                      "width": 10,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Request Type",
+                        "type": "relation"
+                      },
+                      "editable": true,
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        }
+                      },
+                      "handlers": {
+                        "change": null
+                      },
+                      "label": "Request Type",
+                      "hint": "",
+                      "placeholder": "",
+                      "options": [
+
+                      ],
+                      "dataSourceOptions": {
+                        "sortOrder": "asc",
+                        "sortByColumnId": null,
+                        "tableId": {
+                          "zip_name": "Steve Madden - POC/steve_madden_poc_request_types.workato_db_table.json",
+                          "name": "Steve Madden POC - Request Types",
+                          "folder": "Steve Madden - POC"
+                        },
+                        "fieldId": "39fa635a-7cfd-4ce2-a9b0-45770ea01f8c"
+                      },
+                      "appFunctionOptions": null,
+                      "labelDataSource": null,
+                      "multiValue": false
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "dropdown",
+                      "id": "3445e264",
+                      "name": "System",
+                      "x": 0,
+                      "width": 3,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"4eac3156\",\"path\":[\"selectedLabel\"]}')}",
+                          "User Access Review POC 2"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "System",
+                        "type": "relation"
+                      },
+                      "editable": true,
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        }
+                      },
+                      "handlers": {
+                        "change": null
+                      },
+                      "label": "System",
+                      "hint": "",
+                      "placeholder": "",
+                      "options": [
+
+                      ],
+                      "dataSourceOptions": {
+                        "sortOrder": "asc",
+                        "sortByColumnId": null,
+                        "tableId": {
+                          "zip_name": "Steve Madden - POC/steve_madden_poc_systems.workato_db_table.json",
+                          "name": "Steve Madden POC - Systems",
+                          "folder": "Steve Madden - POC"
+                        },
+                        "fieldId": "f89c10c7-bae9-4d33-a3fc-1f68a4c4745c"
+                      },
+                      "appFunctionOptions": null,
+                      "labelDataSource": null,
+                      "multiValue": false
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "input",
+                      "id": "fe3488ac",
+                      "name": "Permissions",
+                      "x": 3,
+                      "width": 6,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"4eac3156\",\"path\":[\"selectedLabel\"]}')}",
+                          "User Access Review POC 2"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "Permissions",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        }
+                      },
+                      "label": "Permissions",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text"
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "dropdown",
+                      "id": "8239f087",
+                      "name": "Appropriate / Not Appropriate",
+                      "x": 9,
+                      "width": 3,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"4eac3156\",\"path\":[\"selectedLabel\"]}')}",
+                          "User Access Review POC 2"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "Appropriate / Not Appropriate",
+                        "type": "relation"
+                      },
+                      "editable": true,
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        }
+                      },
+                      "handlers": {
+                        "change": null
+                      },
+                      "label": "Appropriate / Not Appropriate",
+                      "hint": "",
+                      "placeholder": "",
+                      "options": [
+
+                      ],
+                      "dataSourceOptions": {
+                        "sortOrder": "asc",
+                        "sortByColumnId": null,
+                        "tableId": {
+                          "zip_name": "Steve Madden - POC/steve_madden_poc_appropriate_not_appropriate_values.workato_db_table.json",
+                          "name": "Steve Madden POC - Appropriate / Not Appropriate Values",
+                          "folder": "Steve Madden - POC"
+                        },
+                        "fieldId": "dc61b1c1-6317-454a-8277-ac7618f92792"
+                      },
+                      "appFunctionOptions": null,
+                      "labelDataSource": null,
+                      "multiValue": false
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "input",
+                      "id": "da27121f",
+                      "name": "Comments",
+                      "x": 0,
+                      "width": 6,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"4eac3156\",\"path\":[\"selectedLabel\"]}')}",
+                          "User Access Review POC 2"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "Comments",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        }
+                      },
+                      "label": "Comments",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text"
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "table",
+                      "id": "712517c1",
+                      "name": "Steve Madden POC - User Access Review Table",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"4eac3156\",\"path\":[\"selectedLabel\"]}')}",
+                          "User Access Review POC 1"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Steve Madden POC - User Access Review Table",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Steve Madden - POC/steve_madden_poc_user_access_review_table.workato_db_table.json",
+                        "name": "Steve Madden POC - User Access Review Table",
+                        "folder": "Steve Madden - POC"
+                      },
+                      "relatedColumnId": "5c794c4c-0953-4936-8538-390158d419c8",
+                      "visibleColumnsIds": [
+                        "c86de6b7-3501-4900-b643-ccf68748d90f",
+                        "83a7164a-c847-4100-a95b-4169b8aaaf03",
+                        "5bb36168-4c59-4c36-948a-882369e1e770",
+                        "3aa021d6-f54e-433c-a08a-0c3aafb41576"
+                      ]
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "type": "button",
+                      "id": "426a8be9",
+                      "name": "Submit button",
+                      "x": 0,
+                      "width": 12,
+                      "visible": true,
+                      "handlers": {
+                        "click": {
+                          "type": "save-data"
+                        }
+                      },
+                      "label": "Submit",
+                      "style": "filled",
+                      "enabled": true
+                    },
+                    0
+                  ]
+                ],
+                "backgroundColor": "transparent",
+                "borderColor": "transparent",
+                "padding": "none"
+              },
+              0
+            ]
+          ],
+          "backgroundColor": "#ffffff",
+          "borderColor": "#ced5db",
+          "padding": "large"
+        },
+        1
+      ]
+    ]
+  }
+}
