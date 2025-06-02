@@ -1,0 +1,343 @@
+{
+  "name": "Group Test Request - Submit",
+  "path": "group-test-request-submit",
+  "content": {
+    "background": {
+      "style": "pattern",
+      "pattern": "light-2"
+    },
+    "layout": [
+      1,
+      [
+        {
+          "id": "d8be4b6f",
+          "type": "container",
+          "name": "Container",
+          "x": 1,
+          "width": 11,
+          "visible": true,
+          "layout": [
+            1,
+            [
+              {
+                "id": "2c9b2072",
+                "type": "container",
+                "name": "Container 2",
+                "x": 0,
+                "width": 12,
+                "visible": true,
+                "layout": [
+                  1,
+                  [
+                    {
+                      "id": "6053bc53",
+                      "type": "image",
+                      "name": "Image",
+                      "x": 0,
+                      "width": 1,
+                      "height": 8,
+                      "visible": true,
+                      "image": "https://lcap-files-awsprod-us-east-1.s3.amazonaws.com/4kSYgAU6QDj16k8SJDsQN6/pages/aiMLUJQwXB6KrZuGAL9Do5/image/7w6aeA5kxrvzsLBn.png",
+                      "fitting": "contain",
+                      "horizontalAlignment": "center",
+                      "verticalAlignment": "center",
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "f31fada8",
+                      "type": "text",
+                      "name": "Text",
+                      "x": 1,
+                      "width": 4,
+                      "visible": true,
+                      "text": "# Production Request",
+                      "alignment": "left",
+                      "color": "#24434f",
+                      "validations": {
+                      }
+                    },
+                    3
+                  ],
+                  [
+                    {
+                      "id": "33be5cf9",
+                      "type": "text",
+                      "name": "Text 2",
+                      "x": 8,
+                      "width": 4,
+                      "visible": true,
+                      "text": "User:#{_dp('{\"source\":\"user\",\"path\":[\"email\"]}')}",
+                      "alignment": "right",
+                      "color": "#24434f",
+                      "validations": {
+                      }
+                    },
+                    3
+                  ],
+                  [
+                    {
+                      "id": "ac6076d6",
+                      "type": "input",
+                      "name": "Plant #",
+                      "x": 0,
+                      "width": 3,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Plant #",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Plant #",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text",
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    1
+                  ],
+                  [
+                    {
+                      "id": "7706155c",
+                      "type": "file",
+                      "name": "Batch File Upload",
+                      "x": 7,
+                      "width": 5,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Batch File Upload",
+                        "type": "file"
+                      },
+                      "label": "Batch Upload (.csv)",
+                      "hint": "",
+                      "mode": "upload",
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        },
+                        "fileSize": {
+                          "max": 10
+                        },
+                        "allowedFiles": {
+                          "type": "custom",
+                          "extensions": [
+                            "csv"
+                          ]
+                        }
+                      }
+                    },
+                    4
+                  ],
+                  [
+                    {
+                      "id": "a0b8e826",
+                      "type": "input",
+                      "name": "Storage Location",
+                      "x": 0,
+                      "width": 3,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Production Reversal"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "Storage Location",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Storage Location",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text",
+                      "validations": {
+                        "required": {
+                          "condition": [
+                            1,
+                            [
+                              7,
+                              "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                              "Production Reversal"
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "5b181eb1",
+                      "type": "dropdown",
+                      "name": "Request Type",
+                      "x": 0,
+                      "width": 5,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Request Type",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Production Request Type",
+                      "hint": "",
+                      "placeholder": "Choose an option",
+                      "options": [
+                        {
+                          "title": "Production Test",
+                          "value": "Production Test"
+                        },
+                        {
+                          "title": "Production Reversal",
+                          "value": "Production Reversal"
+                        }
+                      ],
+                      "dataSourceOptions": null,
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "e1df15f9",
+                      "type": "divider",
+                      "name": "Divider",
+                      "x": 0,
+                      "width": 12,
+                      "visible": true,
+                      "backgroundColor": "#ced5db",
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "32399d90",
+                      "type": "table",
+                      "name": "Production Request Line Items",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Production Test"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Production",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/production_request_line_items.workato_db_table.json",
+                        "name": "Production Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "df8c3277-61ff-4e36-9d78-bdcb08a0df15",
+                      "visibleColumnsIds": [
+                        "48796f65-868a-40f7-a9ed-e3f98e07f552",
+                        "d4eb7f5e-825c-4d26-845c-c249964bcb0c",
+                        "5a089567-c54e-4733-a608-4c9efe9df0a7",
+                        "f8a2f14c-0ab6-42a9-97c4-17bb340d57c8",
+                        "844f44b3-7dc6-4e1b-9387-cdb013e67123"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "4a4d3935",
+                      "type": "table",
+                      "name": "Production Request Line Items 2",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Production Reversal"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Production Reversal",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/production_request_line_items.workato_db_table.json",
+                        "name": "Production Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "df8c3277-61ff-4e36-9d78-bdcb08a0df15",
+                      "visibleColumnsIds": [
+                        "48796f65-868a-40f7-a9ed-e3f98e07f552",
+                        "6f8e896a-26e1-48d4-b746-85eba6a5e20b",
+                        "5a089567-c54e-4733-a608-4c9efe9df0a7",
+                        "37c53a09-edd1-42f6-8b75-aa0866c2cd92",
+                        "73e7cc60-08bb-4e23-a834-122b36b58b81",
+                        "d4eb7f5e-825c-4d26-845c-c249964bcb0c",
+                        "844f44b3-7dc6-4e1b-9387-cdb013e67123",
+                        "354b6f1c-5544-47b9-904b-5886f5094508",
+                        "e8499f19-9f2f-448a-bb10-3221a3a8f7d8"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "f4a70061",
+                      "type": "button",
+                      "name": "Button",
+                      "x": 10,
+                      "width": 2,
+                      "visible": true,
+                      "label": "Validate",
+                      "style": "filled",
+                      "action": {
+                        "type": "save-data"
+                      },
+                      "validations": {
+                      }
+                    },
+                    0
+                  ]
+                ],
+                "backgroundColor": "#ffffff",
+                "borderColor": "transparent",
+                "padding": "none",
+                "validations": {
+                }
+              },
+              1
+            ]
+          ],
+          "backgroundColor": "#ffffff",
+          "borderColor": "#ced5db",
+          "padding": "large",
+          "validations": {
+          }
+        },
+        1
+      ]
+    ],
+    "type": "common"
+  }
+}

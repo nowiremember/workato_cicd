@@ -1,0 +1,1769 @@
+{
+  "name": "[CMASP] RF | Monthly Inventory Reconciliation Export",
+  "version": 1,
+  "private": true,
+  "concurrency": 1,
+  "code": {
+    "number": 0,
+    "provider": "workato_recipe_function",
+    "name": "execute",
+    "as": "aff4f51b",
+    "title": null,
+    "description": null,
+    "keyword": "trigger",
+    "input": {
+      "result_schema_json": "[{\"name\":\"error\",\"type\":\"boolean\",\"optional\":false,\"control_type\":\"checkbox\",\"label\":\"Error\",\"render_input\":{},\"parse_output\":{},\"toggle_hint\":\"Select from option list\",\"toggle_field\":{\"label\":\"Error\",\"control_type\":\"text\",\"toggle_hint\":\"Use custom value\",\"name\":\"error\",\"type\":\"boolean\",\"optional\":false}}]",
+      "parameters_schema_json": "[{\"name\":\"Request_ID\",\"type\":\"string\",\"optional\":false,\"control_type\":\"text\",\"label\":\"Request ID\"},{\"name\":\"Request_Type\",\"type\":\"string\",\"optional\":false,\"control_type\":\"text\",\"label\":\"Request type\"}]"
+    },
+    "extended_output_schema": [
+      {
+        "label": "Parameters",
+        "name": "parameters",
+        "properties": [
+          {
+            "control_type": "text",
+            "label": "Request ID",
+            "name": "Request_ID",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "control_type": "text",
+            "label": "Request type",
+            "name": "Request_Type",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "type": "object"
+      }
+    ],
+    "block": [
+      {
+        "number": 1,
+        "provider": "workato_db_table",
+        "name": "get_records",
+        "as": "2645b073",
+        "title": null,
+        "description": "Search records in <span class=\"provider\">CMASP App</span> matching specified criteria<span class=\"conditions-title\">\n  <span class=\"step-title-break-line\"></span>\n<span class=\"step-statement\">If</span>\n<span class=\"condition-title\">\n  <span class=\"provider\">Record ID</span>\n  <span class=\"condition-title__operand\">equals</span>\n  <span class=\"provider\">#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"aff4f51b\",\"path\":[\"parameters\",\"Request_ID\"]}')}</span>\n</span>\n\n</span>\n",
+        "keyword": "action",
+        "dynamicPickListSelection": {
+          "table_id": "CMASP App",
+          "filters.0.field_id": "Record ID"
+        },
+        "input": {
+          "order_direction": "asc",
+          "limit": "100",
+          "table_id": {
+            "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+            "name": "CMASP App",
+            "folder": "Test Import"
+          },
+          "11fbe9a6-a16d-4d7e-86ea-afe42ec03005": "id",
+          "a5612739-5401-4ae7-bd07-782c1a6fb2d1": "date_time",
+          "61aae604-a95e-4519-9091-bb0bf754a67f": "date_time",
+          "filters": [
+            {
+              "op_relation": "eq",
+              "value_relation": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"aff4f51b\",\"path\":[\"parameters\",\"Request_ID\"]}')}",
+              "field_id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+              "op_id": "eq",
+              "value_default": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"aff4f51b\",\"path\":[\"parameters\",\"Request_ID\"]}')}"
+            }
+          ],
+          "ad802640-e174-45b3-90e2-b4d989c75faa": "string",
+          "9748ab5c-ed88-4c89-a180-5f9482a13b94": "string",
+          "3a5339b1-d89f-436e-a6a0-2fccf50a8734": "string",
+          "66affdc6-f254-460b-a7a8-a084c8bf77de": "string",
+          "93d9ee8d-d72c-4e74-8202-acf04c30e51d": "boolean",
+          "8707c956-3ac7-4452-b8dd-f61c9d8477ce": "boolean",
+          "1a9de324-4466-4274-9496-6be199bc2bb6": "boolean",
+          "27d11232-84fb-4560-aa90-ad4ed1be95d1": "string",
+          "4a060708-8448-42d0-861c-f033a5f35bae": "string",
+          "a1a712df-176e-42f9-a45d-6100496ff269": "string",
+          "6aced24e-c3d9-448f-9f03-06eb2e3db69c": "string",
+          "13e1c9af-77e3-40d7-b975-3ff73f56146b": "string",
+          "80650287-023f-40de-8aa8-467d9c1c60ef": "string",
+          "ccf12147-cafa-4f98-be3c-ab97ec42d4cc": "file",
+          "566d77ae-c072-49d0-8abd-6abc423d2580": "string",
+          "f3614f0d-cac7-4553-9fe2-e93bc34bec1a": "file",
+          "adcb8df8-1387-4261-90a6-6360b3b4d98d": "string",
+          "70136a28-d163-45f1-865c-5c3c879dd140": "file",
+          "5c10fa30-df05-4ce0-aef8-d795f3d647eb": "string",
+          "dfe4075f-0091-45dc-862f-f6fdc494c990": "file",
+          "ba2b4e61-5f62-42af-b7da-bbc29384cb14": "file",
+          "cbb9b030-5334-4304-90c6-0fcf749ca731": "file",
+          "eac65c6e-6f0d-4505-8467-06ec7d40eeff": "file"
+        },
+        "extended_output_schema": [
+          {
+            "label": "Records",
+            "name": "records",
+            "of": "object",
+            "properties": [
+              {
+                "control_type": "text",
+                "label": "Record ID",
+                "type": "string",
+                "name": "11fbe9a6_a16d_4d7e_86ea_afe42ec03005"
+              },
+              {
+                "control_type": "text",
+                "label": "Name",
+                "type": "string",
+                "name": "ad802640_e174_45b3_90e2_b4d989c75faa"
+              },
+              {
+                "control_type": "text",
+                "label": "Description",
+                "type": "string",
+                "name": "9748ab5c_ed88_4c89_a180_5f9482a13b94"
+              },
+              {
+                "control_type": "text",
+                "label": "Review comments",
+                "type": "string",
+                "name": "3a5339b1_d89f_436e_a6a0_2fccf50a8734"
+              },
+              {
+                "control_type": "text",
+                "label": "Text",
+                "type": "string",
+                "name": "66affdc6_f254_460b_a7a8_a084c8bf77de"
+              },
+              {
+                "control_type": "checkbox",
+                "label": "Validate",
+                "render_input": {
+                },
+                "parse_output": {
+                },
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Validate",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "type": "boolean",
+                  "name": "93d9ee8d_d72c_4e74_8202_acf04c30e51d"
+                },
+                "type": "boolean",
+                "name": "93d9ee8d_d72c_4e74_8202_acf04c30e51d"
+              },
+              {
+                "control_type": "checkbox",
+                "label": "Error",
+                "render_input": {
+                },
+                "parse_output": {
+                },
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Error",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "type": "boolean",
+                  "name": "8707c956_3ac7_4452_b8dd_f61c9d8477ce"
+                },
+                "type": "boolean",
+                "name": "8707c956_3ac7_4452_b8dd_f61c9d8477ce"
+              },
+              {
+                "control_type": "checkbox",
+                "label": "Approved",
+                "render_input": {
+                },
+                "parse_output": {
+                },
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Approved",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "type": "boolean",
+                  "name": "1a9de324_4466_4274_9496_6be199bc2bb6"
+                },
+                "type": "boolean",
+                "name": "1a9de324_4466_4274_9496_6be199bc2bb6"
+              },
+              {
+                "control_type": "text",
+                "label": "CMASP App ID",
+                "type": "string",
+                "name": "27d11232_84fb_4560_aa90_ad4ed1be95d1"
+              },
+              {
+                "control_type": "text",
+                "label": "User ID",
+                "type": "string",
+                "name": "4a060708_8448_42d0_861c_f033a5f35bae"
+              },
+              {
+                "control_type": "text",
+                "label": "Plant #",
+                "type": "string",
+                "name": "a1a712df_176e_42f9_a45d_6100496ff269"
+              },
+              {
+                "control_type": "text",
+                "label": "Storage Location",
+                "type": "string",
+                "name": "6aced24e_c3d9_448f_9f03_06eb2e3db69c"
+              },
+              {
+                "control_type": "text",
+                "label": "Request Type",
+                "type": "string",
+                "name": "13e1c9af_77e3_40d7_b975_3ff73f56146b"
+              },
+              {
+                "control_type": "text",
+                "label": "Error Messge",
+                "type": "string",
+                "name": "80650287_023f_40de_8aa8_467d9c1c60ef"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "FileUpload",
+                "custom_type": "file",
+                "type": "object",
+                "name": "ccf12147_cafa_4f98_be3c_ab97ec42d4cc"
+              },
+              {
+                "control_type": "text",
+                "label": "CMASP Number",
+                "type": "string",
+                "name": "566d77ae_c072_49d0_8abd_6abc423d2580"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Batch File Upload",
+                "custom_type": "file",
+                "type": "object",
+                "name": "f3614f0d_cac7_4553_9fe2_e93bc34bec1a"
+              },
+              {
+                "control_type": "text",
+                "label": "Rejection Reason",
+                "type": "string",
+                "name": "adcb8df8_1387_4261_90a6_6360b3b4d98d"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Attachment",
+                "custom_type": "file",
+                "type": "object",
+                "name": "70136a28_d163_45f1_865c_5c3c879dd140"
+              },
+              {
+                "control_type": "text",
+                "label": "Site Leader Email",
+                "type": "string",
+                "name": "5c10fa30_df05_4ce0_aef8_d795f3d647eb"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Monthly IR Export File",
+                "custom_type": "file",
+                "type": "object",
+                "name": "dfe4075f_0091_45dc_862f_f6fdc494c990"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Vendor Validation",
+                "custom_type": "file",
+                "type": "object",
+                "name": "ba2b4e61_5f62_42af_b7da_bbc29384cb14"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "ZIRA MAT",
+                "custom_type": "file",
+                "type": "object",
+                "name": "cbb9b030_5334_4304_90c6_0fcf749ca731"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "ZIRA FP",
+                "custom_type": "file",
+                "type": "object",
+                "name": "eac65c6e_6f0d_4505_8467_06ec7d40eeff"
+              },
+              {
+                "control_type": "date_time",
+                "label": "Created at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "a5612739_5401_4ae7_bd07_782c1a6fb2d1"
+              },
+              {
+                "control_type": "date_time",
+                "label": "Updated at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "61aae604_a95e_4519_9091_bb0bf754a67f"
+              }
+            ],
+            "type": "array"
+          },
+          {
+            "control_type": "text",
+            "label": "Next Page Token",
+            "name": "continuation_token",
+            "type": "string"
+          }
+        ],
+        "extended_input_schema": [
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_ad802640-e174-45b3-90e2-b4d989c75faa",
+            "name": "ad802640-e174-45b3-90e2-b4d989c75faa",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_9748ab5c-ed88-4c89-a180-5f9482a13b94",
+            "name": "9748ab5c-ed88-4c89-a180-5f9482a13b94",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_3a5339b1-d89f-436e-a6a0-2fccf50a8734",
+            "name": "3a5339b1-d89f-436e-a6a0-2fccf50a8734",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_66affdc6-f254-460b-a7a8-a084c8bf77de",
+            "name": "66affdc6-f254-460b-a7a8-a084c8bf77de",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "boolean",
+            "label": "$internal_value_93d9ee8d-d72c-4e74-8202-acf04c30e51d",
+            "name": "93d9ee8d-d72c-4e74-8202-acf04c30e51d",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "boolean",
+            "label": "$internal_value_8707c956-3ac7-4452-b8dd-f61c9d8477ce",
+            "name": "8707c956-3ac7-4452-b8dd-f61c9d8477ce",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "boolean",
+            "label": "$internal_value_1a9de324-4466-4274-9496-6be199bc2bb6",
+            "name": "1a9de324-4466-4274-9496-6be199bc2bb6",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_27d11232-84fb-4560-aa90-ad4ed1be95d1",
+            "name": "27d11232-84fb-4560-aa90-ad4ed1be95d1",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_4a060708-8448-42d0-861c-f033a5f35bae",
+            "name": "4a060708-8448-42d0-861c-f033a5f35bae",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_a1a712df-176e-42f9-a45d-6100496ff269",
+            "name": "a1a712df-176e-42f9-a45d-6100496ff269",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_6aced24e-c3d9-448f-9f03-06eb2e3db69c",
+            "name": "6aced24e-c3d9-448f-9f03-06eb2e3db69c",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_13e1c9af-77e3-40d7-b975-3ff73f56146b",
+            "name": "13e1c9af-77e3-40d7-b975-3ff73f56146b",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_80650287-023f-40de-8aa8-467d9c1c60ef",
+            "name": "80650287-023f-40de-8aa8-467d9c1c60ef",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "file",
+            "label": "$internal_value_ccf12147-cafa-4f98-be3c-ab97ec42d4cc",
+            "name": "ccf12147-cafa-4f98-be3c-ab97ec42d4cc",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_566d77ae-c072-49d0-8abd-6abc423d2580",
+            "name": "566d77ae-c072-49d0-8abd-6abc423d2580",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "file",
+            "label": "$internal_value_f3614f0d-cac7-4553-9fe2-e93bc34bec1a",
+            "name": "f3614f0d-cac7-4553-9fe2-e93bc34bec1a",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_adcb8df8-1387-4261-90a6-6360b3b4d98d",
+            "name": "adcb8df8-1387-4261-90a6-6360b3b4d98d",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "file",
+            "label": "$internal_value_70136a28-d163-45f1-865c-5c3c879dd140",
+            "name": "70136a28-d163-45f1-865c-5c3c879dd140",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_5c10fa30-df05-4ce0-aef8-d795f3d647eb",
+            "name": "5c10fa30-df05-4ce0-aef8-d795f3d647eb",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "file",
+            "label": "$internal_value_dfe4075f-0091-45dc-862f-f6fdc494c990",
+            "name": "dfe4075f-0091-45dc-862f-f6fdc494c990",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "file",
+            "label": "$internal_value_ba2b4e61-5f62-42af-b7da-bbc29384cb14",
+            "name": "ba2b4e61-5f62-42af-b7da-bbc29384cb14",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "file",
+            "label": "$internal_value_cbb9b030-5334-4304-90c6-0fcf749ca731",
+            "name": "cbb9b030-5334-4304-90c6-0fcf749ca731",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "file",
+            "label": "$internal_value_eac65c6e-6f0d-4505-8467-06ec7d40eeff",
+            "name": "eac65c6e-6f0d-4505-8467-06ec7d40eeff",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "id",
+            "label": "$internal_value_11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+            "name": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "date_time",
+            "label": "$internal_value_a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+            "name": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "date_time",
+            "label": "$internal_value_61aae604-a95e-4519-9091-bb0bf754a67f",
+            "name": "61aae604-a95e-4519-9091-bb0bf754a67f",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          }
+        ],
+        "uuid": "fd2408a0-2657-4f1e-a456-90f9888d079a",
+        "skip": false
+      },
+      {
+        "number": 2,
+        "provider": "workato_db_table",
+        "name": "get_records",
+        "as": "b42f1375",
+        "title": null,
+        "description": "Search records in <span class=\"provider\">Monthly Inventory Reconciliation Line Items</span> matching specified criteria<span class=\"conditions-title\">\n  <span class=\"step-title-break-line\"></span>\n<span class=\"step-statement\">If</span>\n<span class=\"condition-title\">\n  <span class=\"provider\">CMASP App ID</span>\n  <span class=\"condition-title__operand\">equals</span>\n  <span class=\"provider\">#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"aff4f51b\",\"path\":[\"parameters\",\"Request_ID\"]}')}</span>\n</span>\n\n</span>\n",
+        "keyword": "action",
+        "dynamicPickListSelection": {
+          "table_id": "Monthly Inventory Reconciliation Line Items",
+          "filters.0.field_id": "CMASP Number"
+        },
+        "input": {
+          "order_direction": "asc",
+          "limit": "100",
+          "table_id": {
+            "zip_name": "Test Import/monthly_inventory_reconciliation_line_items.workato_db_table.json",
+            "name": "Monthly Inventory Reconciliation Line Items",
+            "folder": "Test Import"
+          },
+          "d0ac70ec-041a-4f7b-8a77-0aaa9ac0ee75": "string",
+          "4c416826-d3a2-4db4-848f-3d660c50f56c": "string",
+          "08cbf0a6-28ac-4b55-93e6-b7b8ea4544f7": "string",
+          "51d2bbfb-7fb1-4301-b9b6-43c31b1196b7": "number",
+          "aa9e4ff5-864c-4539-8c30-c6dd084e70ee": "number",
+          "36de8489-2d4b-4151-a845-e8eb6dea57b7": "number",
+          "85bfec96-0b47-4301-88da-7685abedcc15": "relation",
+          "11fbe9a6-a16d-4d7e-86ea-afe42ec03005": "id",
+          "a5612739-5401-4ae7-bd07-782c1a6fb2d1": "date_time",
+          "61aae604-a95e-4519-9091-bb0bf754a67f": "date_time",
+          "filters": [
+            {
+              "field_id": "85bfec96-0b47-4301-88da-7685abedcc15",
+              "op_relation": "eq",
+              "value_relation": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"aff4f51b\",\"path\":[\"parameters\",\"Request_ID\"]}')}"
+            }
+          ]
+        },
+        "extended_output_schema": [
+          {
+            "label": "Records",
+            "name": "records",
+            "of": "object",
+            "properties": [
+              {
+                "control_type": "text",
+                "label": "Record ID",
+                "type": "string",
+                "name": "11fbe9a6_a16d_4d7e_86ea_afe42ec03005"
+              },
+              {
+                "control_type": "text",
+                "label": "P&G GCAS #",
+                "type": "string",
+                "name": "d0ac70ec_041a_4f7b_8a77_0aaa9ac0ee75"
+              },
+              {
+                "control_type": "text",
+                "label": "Material Description",
+                "type": "string",
+                "name": "4c416826_d3a2_4db4_848f_3d660c50f56c"
+              },
+              {
+                "control_type": "text",
+                "label": "Unit of Measure",
+                "type": "string",
+                "name": "08cbf0a6_28ac_4b55_93e6_b7b8ea4544f7"
+              },
+              {
+                "control_type": "number",
+                "label": "Count Unrestricted",
+                "parse_output": "float_conversion",
+                "type": "number",
+                "name": "51d2bbfb_7fb1_4301_b9b6_43c31b1196b7"
+              },
+              {
+                "control_type": "number",
+                "label": "Count Blocked",
+                "parse_output": "float_conversion",
+                "type": "number",
+                "name": "aa9e4ff5_864c_4539_8c30_c6dd084e70ee"
+              },
+              {
+                "control_type": "number",
+                "label": "Count Quality Inspect",
+                "parse_output": "float_conversion",
+                "type": "number",
+                "name": "36de8489_2d4b_4151_a845_e8eb6dea57b7"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "Record ID",
+                    "type": "string",
+                    "name": "record_id"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "CMASP App ID",
+                    "type": "string",
+                    "name": "display_name"
+                  }
+                ],
+                "label": "CMASP App ID",
+                "custom_type": "relation",
+                "custom_field_id": "CMASP App ID",
+                "type": "object",
+                "name": "85bfec96_0b47_4301_88da_7685abedcc15"
+              },
+              {
+                "control_type": "date_time",
+                "label": "Created at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "a5612739_5401_4ae7_bd07_782c1a6fb2d1"
+              },
+              {
+                "control_type": "date_time",
+                "label": "Updated at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "61aae604_a95e_4519_9091_bb0bf754a67f"
+              }
+            ],
+            "type": "array"
+          },
+          {
+            "control_type": "text",
+            "label": "Next Page Token",
+            "name": "continuation_token",
+            "type": "string"
+          }
+        ],
+        "extended_input_schema": [
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_d0ac70ec-041a-4f7b-8a77-0aaa9ac0ee75",
+            "name": "d0ac70ec-041a-4f7b-8a77-0aaa9ac0ee75",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_4c416826-d3a2-4db4-848f-3d660c50f56c",
+            "name": "4c416826-d3a2-4db4-848f-3d660c50f56c",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "string",
+            "label": "$internal_value_08cbf0a6-28ac-4b55-93e6-b7b8ea4544f7",
+            "name": "08cbf0a6-28ac-4b55-93e6-b7b8ea4544f7",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "number",
+            "label": "$internal_value_51d2bbfb-7fb1-4301-b9b6-43c31b1196b7",
+            "name": "51d2bbfb-7fb1-4301-b9b6-43c31b1196b7",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "number",
+            "label": "$internal_value_aa9e4ff5-864c-4539-8c30-c6dd084e70ee",
+            "name": "aa9e4ff5-864c-4539-8c30-c6dd084e70ee",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "number",
+            "label": "$internal_value_36de8489-2d4b-4151-a845-e8eb6dea57b7",
+            "name": "36de8489-2d4b-4151-a845-e8eb6dea57b7",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "relation",
+            "label": "$internal_value_85bfec96-0b47-4301-88da-7685abedcc15",
+            "name": "85bfec96-0b47-4301-88da-7685abedcc15",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "id",
+            "label": "$internal_value_11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+            "name": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "date_time",
+            "label": "$internal_value_a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+            "name": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "control_type": "text",
+            "default": "date_time",
+            "label": "$internal_value_61aae604-a95e-4519-9091-bb0bf754a67f",
+            "name": "61aae604-a95e-4519-9091-bb0bf754a67f",
+            "ngIf": "false",
+            "optional": true,
+            "type": "string"
+          }
+        ],
+        "comment": "Find Line items for CMASP Record",
+        "uuid": "468a7ac8-4bbd-4bc9-a3d3-bff002ffd5f5"
+      },
+      {
+        "number": 3,
+        "provider": "csv_parser",
+        "name": "create_csv_lines",
+        "as": "eb90804f",
+        "title": null,
+        "description": null,
+        "keyword": "action",
+        "toggleCfg": {
+          "create_header_line": true,
+          "force_quotes": true
+        },
+        "input": {
+          "create_header_line": "true",
+          "column_separator": ",",
+          "force_quotes": "false",
+          "column_labels": "Plant\nStorage Location\nP&G Owned Material #\nDescription\nUoM\nCount Unrestricted\nCount Block\nCount Quality Inspect",
+          "lines": {
+            "____source": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"b42f1375\",\"path\":[\"records\"]}')}",
+            "column_0": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"2645b073\",\"path\":[\"records\",{\"path_element_type\":\"current_item\"},\"a1a712df_176e_42f9_a45d_6100496ff269\"]}')}",
+            "column_1": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"2645b073\",\"path\":[\"records\",{\"path_element_type\":\"current_item\"},\"6aced24e_c3d9_448f_9f03_06eb2e3db69c\"]}')}",
+            "column_2": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"b42f1375\",\"path\":[\"records\",{\"path_element_type\":\"current_item\"},\"d0ac70ec_041a_4f7b_8a77_0aaa9ac0ee75\"]}')}",
+            "column_3": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"b42f1375\",\"path\":[\"records\",{\"path_element_type\":\"current_item\"},\"4c416826_d3a2_4db4_848f_3d660c50f56c\"]}')}",
+            "column_4": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"b42f1375\",\"path\":[\"records\",{\"path_element_type\":\"current_item\"},\"08cbf0a6_28ac_4b55_93e6_b7b8ea4544f7\"]}')}",
+            "column_5": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"b42f1375\",\"path\":[\"records\",{\"path_element_type\":\"current_item\"},\"51d2bbfb_7fb1_4301_b9b6_43c31b1196b7\"]}')}",
+            "column_6": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"b42f1375\",\"path\":[\"records\",{\"path_element_type\":\"current_item\"},\"aa9e4ff5_864c_4539_8c30_c6dd084e70ee\"]}')}",
+            "column_7": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"b42f1375\",\"path\":[\"records\",{\"path_element_type\":\"current_item\"},\"36de8489_2d4b_4151_a845_e8eb6dea57b7\"]}')}"
+          }
+        },
+        "extended_input_schema": [
+          {
+            "hint": "Provide field mappings for the CSV data below.",
+            "label": "CSV data lines",
+            "name": "lines",
+            "of": "object",
+            "properties": [
+              {
+                "control_type": "text",
+                "label": "Plant",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "column_0"
+              },
+              {
+                "control_type": "text",
+                "label": "Storage Location",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "column_1"
+              },
+              {
+                "control_type": "text",
+                "label": "P&G Owned Material #",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "column_2"
+              },
+              {
+                "control_type": "text",
+                "label": "Description",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "column_3"
+              },
+              {
+                "control_type": "text",
+                "label": "UoM",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "column_4"
+              },
+              {
+                "control_type": "text",
+                "label": "Count Unrestricted",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "column_5"
+              },
+              {
+                "control_type": "text",
+                "label": "Count Block",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "column_6"
+              },
+              {
+                "control_type": "text",
+                "label": "Count Quality Inspect",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "column_7"
+              }
+            ],
+            "type": "array"
+          }
+        ],
+        "comment": "Create CSV containing Line Items",
+        "uuid": "bd045e3f-ed28-41bf-84be-a88779140eed"
+      },
+      {
+        "number": 4,
+        "provider": "workato_db_table",
+        "name": "update_record",
+        "as": "cf90c40c",
+        "title": null,
+        "description": "Update a record in <span class=\"provider\">CMASP App</span>",
+        "keyword": "action",
+        "dynamicPickListSelection": {
+          "table_id": "CMASP App"
+        },
+        "input": {
+          "record_id": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"aff4f51b\",\"path\":[\"parameters\",\"Request_ID\"]}')}",
+          "table_id": {
+            "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+            "name": "CMASP App",
+            "folder": "Test Import"
+          },
+          "parameters": {
+            "dfe4075f_0091_45dc_862f_f6fdc494c990": {
+              "filename": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_db_table\",\"line\":\"2645b073\",\"path\":[\"records\",{\"path_element_type\":\"current_item\"},\"566d77ae_c072_49d0_8abd_6abc423d2580\"]}')} - #{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"aff4f51b\",\"path\":[\"parameters\",\"Request_Type\"]}')}.csv",
+              "file_content": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"csv_parser\",\"line\":\"eb90804f\",\"path\":[\"csv_lines\"]}')}"
+            }
+          }
+        },
+        "extended_output_schema": [
+          {
+            "label": "Record",
+            "name": "record",
+            "properties": [
+              {
+                "control_type": "text",
+                "label": "Record ID",
+                "type": "string",
+                "name": "11fbe9a6_a16d_4d7e_86ea_afe42ec03005"
+              },
+              {
+                "control_type": "text",
+                "label": "Name",
+                "type": "string",
+                "name": "ad802640_e174_45b3_90e2_b4d989c75faa"
+              },
+              {
+                "control_type": "text",
+                "label": "Description",
+                "type": "string",
+                "name": "9748ab5c_ed88_4c89_a180_5f9482a13b94"
+              },
+              {
+                "control_type": "text",
+                "label": "Review comments",
+                "type": "string",
+                "name": "3a5339b1_d89f_436e_a6a0_2fccf50a8734"
+              },
+              {
+                "control_type": "text",
+                "label": "Text",
+                "type": "string",
+                "name": "66affdc6_f254_460b_a7a8_a084c8bf77de"
+              },
+              {
+                "control_type": "checkbox",
+                "label": "Validate",
+                "render_input": {
+                },
+                "parse_output": {
+                },
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Validate",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "type": "boolean",
+                  "name": "93d9ee8d_d72c_4e74_8202_acf04c30e51d"
+                },
+                "type": "boolean",
+                "name": "93d9ee8d_d72c_4e74_8202_acf04c30e51d"
+              },
+              {
+                "control_type": "checkbox",
+                "label": "Error",
+                "render_input": {
+                },
+                "parse_output": {
+                },
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Error",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "type": "boolean",
+                  "name": "8707c956_3ac7_4452_b8dd_f61c9d8477ce"
+                },
+                "type": "boolean",
+                "name": "8707c956_3ac7_4452_b8dd_f61c9d8477ce"
+              },
+              {
+                "control_type": "checkbox",
+                "label": "Approved",
+                "render_input": {
+                },
+                "parse_output": {
+                },
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Approved",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "type": "boolean",
+                  "name": "1a9de324_4466_4274_9496_6be199bc2bb6"
+                },
+                "type": "boolean",
+                "name": "1a9de324_4466_4274_9496_6be199bc2bb6"
+              },
+              {
+                "control_type": "text",
+                "label": "CMASP App ID",
+                "type": "string",
+                "name": "27d11232_84fb_4560_aa90_ad4ed1be95d1"
+              },
+              {
+                "control_type": "text",
+                "label": "User ID",
+                "type": "string",
+                "name": "4a060708_8448_42d0_861c_f033a5f35bae"
+              },
+              {
+                "control_type": "text",
+                "label": "Plant #",
+                "type": "string",
+                "name": "a1a712df_176e_42f9_a45d_6100496ff269"
+              },
+              {
+                "control_type": "text",
+                "label": "Storage Location",
+                "type": "string",
+                "name": "6aced24e_c3d9_448f_9f03_06eb2e3db69c"
+              },
+              {
+                "control_type": "text",
+                "label": "Request Type",
+                "type": "string",
+                "name": "13e1c9af_77e3_40d7_b975_3ff73f56146b"
+              },
+              {
+                "control_type": "text",
+                "label": "Error Messge",
+                "type": "string",
+                "name": "80650287_023f_40de_8aa8_467d9c1c60ef"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "FileUpload",
+                "custom_type": "file",
+                "type": "object",
+                "name": "ccf12147_cafa_4f98_be3c_ab97ec42d4cc"
+              },
+              {
+                "control_type": "text",
+                "label": "CMASP Number",
+                "type": "string",
+                "name": "566d77ae_c072_49d0_8abd_6abc423d2580"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Batch File Upload",
+                "custom_type": "file",
+                "type": "object",
+                "name": "f3614f0d_cac7_4553_9fe2_e93bc34bec1a"
+              },
+              {
+                "control_type": "text",
+                "label": "Rejection Reason",
+                "type": "string",
+                "name": "adcb8df8_1387_4261_90a6_6360b3b4d98d"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Attachment",
+                "custom_type": "file",
+                "type": "object",
+                "name": "70136a28_d163_45f1_865c_5c3c879dd140"
+              },
+              {
+                "control_type": "text",
+                "label": "Site Leader Email",
+                "type": "string",
+                "name": "5c10fa30_df05_4ce0_aef8_d795f3d647eb"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Monthly IR Export File",
+                "custom_type": "file",
+                "type": "object",
+                "name": "dfe4075f_0091_45dc_862f_f6fdc494c990"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Vendor Validation",
+                "custom_type": "file",
+                "type": "object",
+                "name": "ba2b4e61_5f62_42af_b7da_bbc29384cb14"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "ZIRA MAT",
+                "custom_type": "file",
+                "type": "object",
+                "name": "cbb9b030_5334_4304_90c6_0fcf749ca731"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "ZIRA FP",
+                "custom_type": "file",
+                "type": "object",
+                "name": "eac65c6e_6f0d_4505_8467_06ec7d40eeff"
+              },
+              {
+                "control_type": "date_time",
+                "label": "Created at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "a5612739_5401_4ae7_bd07_782c1a6fb2d1"
+              },
+              {
+                "control_type": "date_time",
+                "label": "Updated at",
+                "render_input": "date_time_conversion",
+                "parse_output": "date_time_conversion",
+                "type": "date_time",
+                "name": "61aae604_a95e_4519_9091_bb0bf754a67f"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "extended_input_schema": [
+          {
+            "hint": "Fill out the fields that need to be updated. Fields that are left blank will not be updated.",
+            "label": "Update record fields with new inputs",
+            "name": "parameters",
+            "properties": [
+              {
+                "control_type": "text",
+                "label": "Name",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "ad802640_e174_45b3_90e2_b4d989c75faa"
+              },
+              {
+                "control_type": "text-area",
+                "label": "Description",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "9748ab5c_ed88_4c89_a180_5f9482a13b94"
+              },
+              {
+                "control_type": "text-area",
+                "label": "Review comments",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "3a5339b1_d89f_436e_a6a0_2fccf50a8734"
+              },
+              {
+                "control_type": "text",
+                "label": "Text",
+                "optional": true,
+                "sticky": true,
+                "type": "string",
+                "name": "66affdc6_f254_460b_a7a8_a084c8bf77de"
+              },
+              {
+                "control_type": "checkbox",
+                "label": "Validate",
+                "render_input": "boolean_conversion",
+                "parse_output": "boolean_conversion",
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Validate",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "hint": null,
+                  "placeholder": true,
+                  "optional": true,
+                  "sticky": true,
+                  "render_input": "boolean_conversion",
+                  "parse_output": "boolean_conversion",
+                  "type": "boolean",
+                  "name": "93d9ee8d_d72c_4e74_8202_acf04c30e51d"
+                },
+                "placeholder": true,
+                "optional": true,
+                "sticky": true,
+                "type": "boolean",
+                "name": "93d9ee8d_d72c_4e74_8202_acf04c30e51d"
+              },
+              {
+                "control_type": "checkbox",
+                "label": "Error",
+                "render_input": "boolean_conversion",
+                "parse_output": "boolean_conversion",
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Error",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "hint": null,
+                  "placeholder": null,
+                  "optional": true,
+                  "sticky": false,
+                  "render_input": "boolean_conversion",
+                  "parse_output": "boolean_conversion",
+                  "type": "boolean",
+                  "name": "8707c956_3ac7_4452_b8dd_f61c9d8477ce"
+                },
+                "optional": true,
+                "sticky": false,
+                "type": "boolean",
+                "name": "8707c956_3ac7_4452_b8dd_f61c9d8477ce"
+              },
+              {
+                "control_type": "checkbox",
+                "label": "Approved",
+                "render_input": "boolean_conversion",
+                "parse_output": "boolean_conversion",
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Approved",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "hint": null,
+                  "placeholder": false,
+                  "optional": true,
+                  "sticky": false,
+                  "render_input": "boolean_conversion",
+                  "parse_output": "boolean_conversion",
+                  "type": "boolean",
+                  "name": "1a9de324_4466_4274_9496_6be199bc2bb6"
+                },
+                "placeholder": false,
+                "optional": true,
+                "sticky": false,
+                "type": "boolean",
+                "name": "1a9de324_4466_4274_9496_6be199bc2bb6"
+              },
+              {
+                "control_type": "text",
+                "label": "CMASP App ID",
+                "optional": true,
+                "sticky": false,
+                "type": "string",
+                "name": "27d11232_84fb_4560_aa90_ad4ed1be95d1"
+              },
+              {
+                "control_type": "text",
+                "label": "User ID",
+                "optional": true,
+                "sticky": false,
+                "type": "string",
+                "name": "4a060708_8448_42d0_861c_f033a5f35bae"
+              },
+              {
+                "control_type": "text",
+                "label": "Plant #",
+                "optional": true,
+                "sticky": false,
+                "type": "string",
+                "name": "a1a712df_176e_42f9_a45d_6100496ff269"
+              },
+              {
+                "control_type": "text",
+                "label": "Storage Location",
+                "optional": true,
+                "sticky": false,
+                "type": "string",
+                "name": "6aced24e_c3d9_448f_9f03_06eb2e3db69c"
+              },
+              {
+                "control_type": "text",
+                "label": "Request Type",
+                "optional": true,
+                "sticky": false,
+                "type": "string",
+                "name": "13e1c9af_77e3_40d7_b975_3ff73f56146b"
+              },
+              {
+                "control_type": "text-area",
+                "label": "Error Messge",
+                "optional": true,
+                "sticky": false,
+                "type": "string",
+                "name": "80650287_023f_40de_8aa8_467d9c1c60ef"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "strip_interpolation": true,
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "FileUpload",
+                "optional": true,
+                "custom_type": "file",
+                "type": "object",
+                "name": "ccf12147_cafa_4f98_be3c_ab97ec42d4cc"
+              },
+              {
+                "control_type": "text",
+                "label": "CMASP Number",
+                "optional": true,
+                "sticky": false,
+                "type": "string",
+                "name": "566d77ae_c072_49d0_8abd_6abc423d2580"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "strip_interpolation": true,
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Batch File Upload",
+                "optional": true,
+                "custom_type": "file",
+                "type": "object",
+                "name": "f3614f0d_cac7_4553_9fe2_e93bc34bec1a"
+              },
+              {
+                "control_type": "text-area",
+                "label": "Rejection Reason",
+                "optional": true,
+                "sticky": false,
+                "type": "string",
+                "name": "adcb8df8_1387_4261_90a6_6360b3b4d98d"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "strip_interpolation": true,
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Attachment",
+                "optional": true,
+                "custom_type": "file",
+                "type": "object",
+                "name": "70136a28_d163_45f1_865c_5c3c879dd140"
+              },
+              {
+                "control_type": "text",
+                "label": "Site Leader Email",
+                "optional": true,
+                "sticky": false,
+                "type": "string",
+                "name": "5c10fa30_df05_4ce0_aef8_d795f3d647eb"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "strip_interpolation": true,
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Monthly IR Export File",
+                "optional": true,
+                "custom_type": "file",
+                "type": "object",
+                "name": "dfe4075f_0091_45dc_862f_f6fdc494c990"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "strip_interpolation": true,
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "Vendor Validation",
+                "optional": true,
+                "custom_type": "file",
+                "type": "object",
+                "name": "ba2b4e61_5f62_42af_b7da_bbc29384cb14"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "strip_interpolation": true,
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "ZIRA MAT",
+                "optional": true,
+                "custom_type": "file",
+                "type": "object",
+                "name": "cbb9b030_5334_4304_90c6_0fcf749ca731"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "File name",
+                    "type": "string",
+                    "name": "filename"
+                  },
+                  {
+                    "control_type": "text",
+                    "label": "File contents",
+                    "strip_interpolation": true,
+                    "type": "string",
+                    "name": "file_content"
+                  }
+                ],
+                "label": "ZIRA FP",
+                "optional": true,
+                "custom_type": "file",
+                "type": "object",
+                "name": "eac65c6e_6f0d_4505_8467_06ec7d40eeff"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "comment": "Add CSV file to the CMASP Record",
+        "uuid": "3f229192-4d2a-4d60-922a-d87ce850d3a3"
+      },
+      {
+        "number": 5,
+        "provider": "workato_recipe_function",
+        "name": "return_result",
+        "as": "3bd2dd89",
+        "title": null,
+        "description": null,
+        "keyword": "action",
+        "input": {
+          "result": {
+            "error": "false"
+          }
+        },
+        "extended_output_schema": [
+          {
+            "label": "Result",
+            "name": "result",
+            "properties": [
+              {
+                "control_type": "checkbox",
+                "label": "Error",
+                "render_input": {
+                },
+                "parse_output": {
+                },
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Error",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "name": "error",
+                  "type": "boolean",
+                  "optional": false
+                },
+                "name": "error",
+                "type": "boolean",
+                "optional": false
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "extended_input_schema": [
+          {
+            "label": "Result",
+            "name": "result",
+            "properties": [
+              {
+                "control_type": "checkbox",
+                "label": "Error",
+                "render_input": {
+                },
+                "parse_output": {
+                },
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                  "label": "Error",
+                  "control_type": "text",
+                  "toggle_hint": "Use custom value",
+                  "name": "error",
+                  "type": "boolean",
+                  "optional": false
+                },
+                "name": "error",
+                "type": "boolean",
+                "optional": false
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "uuid": "2ebbc167-0ba4-455e-bc9f-37a293de28ec"
+      }
+    ],
+    "job_report_schema": [
+      {
+        "name": "custom_column_0",
+        "label": "Request Type"
+      },
+      {
+        "name": "custom_column_1",
+        "label": "Record ID"
+      }
+    ],
+    "job_report_config": {
+      "custom_column_0": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"aff4f51b\",\"path\":[\"parameters\",\"Request_Type\"]}')}",
+      "custom_column_1": "#{_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"aff4f51b\",\"path\":[\"parameters\",\"Request_ID\"]}')}"
+    },
+    "uuid": "925128c2-43a7-4618-a293-e4f5b1fa5625",
+    "unfinished": false
+  },
+  "config": [
+    {
+      "keyword": "application",
+      "provider": "workato_recipe_function",
+      "skip_validation": false,
+      "account_id": null
+    },
+    {
+      "keyword": "application",
+      "provider": "workato_db_table",
+      "skip_validation": false,
+      "account_id": null
+    },
+    {
+      "keyword": "application",
+      "provider": "csv_parser",
+      "skip_validation": false,
+      "account_id": null
+    }
+  ]
+}

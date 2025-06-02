@@ -1,0 +1,259 @@
+{
+  "name": "CMASP App",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "ad802640-e174-45b3-90e2-b4d989c75faa",
+      "title": "Name",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "9748ab5c-ed88-4c89-a180-5f9482a13b94",
+      "title": "Description",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "3a5339b1-d89f-436e-a6a0-2fccf50a8734",
+      "title": "Review comments",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "93d9ee8d-d72c-4e74-8202-acf04c30e51d",
+      "title": "Validate",
+      "type": "boolean",
+      "default_value": true,
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "8707c956-3ac7-4452-b8dd-f61c9d8477ce",
+      "title": "Error",
+      "type": "boolean",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "1a9de324-4466-4274-9496-6be199bc2bb6",
+      "title": "Approved",
+      "type": "boolean",
+      "default_value": false,
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "27d11232-84fb-4560-aa90-ad4ed1be95d1",
+      "title": "CMASP App ID",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "4a060708-8448-42d0-861c-f033a5f35bae",
+      "title": "User ID",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "a1a712df-176e-42f9-a45d-6100496ff269",
+      "title": "Plant #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "6aced24e-c3d9-448f-9f03-06eb2e3db69c",
+      "title": "Storage Location",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "13e1c9af-77e3-40d7-b975-3ff73f56146b",
+      "title": "Request Type",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "80650287-023f-40de-8aa8-467d9c1c60ef",
+      "title": "Error Messge",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "ccf12147-cafa-4f98-be3c-ab97ec42d4cc",
+      "title": "FileUpload",
+      "type": "file",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "566d77ae-c072-49d0-8abd-6abc423d2580",
+      "title": "CMASP Number",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f3614f0d-cac7-4553-9fe2-e93bc34bec1a",
+      "title": "Batch File Upload",
+      "type": "file",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "adcb8df8-1387-4261-90a6-6360b3b4d98d",
+      "title": "Rejection Reason",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "70136a28-d163-45f1-865c-5c3c879dd140",
+      "title": "Attachment",
+      "type": "file",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5c10fa30-df05-4ce0-aef8-d795f3d647eb",
+      "title": "Site Leader Email",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "dfe4075f-0091-45dc-862f-f6fdc494c990",
+      "title": "Monthly IR Export File",
+      "type": "file",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "ba2b4e61-5f62-42af-b7da-bbc29384cb14",
+      "title": "Vendor Validation",
+      "type": "file",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "cbb9b030-5334-4304-90c6-0fcf749ca731",
+      "title": "ZIRA MAT",
+      "type": "file",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "eac65c6e-6f0d-4505-8467-06ec7d40eeff",
+      "title": "ZIRA FP",
+      "type": "file",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "baa6aece-3395-4010-9eb7-cea9446c713e",
+      "title": "Scrap CM Validated csv",
+      "type": "file",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

@@ -1,0 +1,261 @@
+{
+  "name": "Rework Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "aaa3f4f6-fc06-485f-ac89-0d0b93e7bc98",
+      "title": "Date",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "2622e303-5152-4af0-9dc7-9f228aa5d3a4",
+      "title": "Original P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "e0801bd3-b049-4c39-b215-74f214301b86",
+      "title": "Original GCAS Desc",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f443944e-7b2f-43af-af8b-a3c9168bf37c",
+      "title": "Original GCAS Qty",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "a82cc792-b7b1-4c8a-ae6c-559b755cc248",
+      "title": "Original GCAS UoM",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "a3c09237-11e5-4951-9a9c-95993bb40655",
+      "title": "Original US $ Amount",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "fced76c7-9ba3-48b9-96bb-e9f4e74f86e0",
+      "title": "New P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "6f764780-99ed-472f-b046-be71890470e8",
+      "title": "New GCAS Desc",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "06826b70-5f5a-4bcd-8c8b-6c9447b01fdb",
+      "title": "New GCAS Quantity",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "085f2c2d-870f-4bf2-932e-2a62f572cc9e",
+      "title": "New US $ Amount",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "0dbe32b0-1a29-4e64-a232-dcc3e4830a13",
+      "title": "New GCAS UoM",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "b2e435d3-a801-427c-9e28-c63eba36bede",
+      "title": "Site Leader Name",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "d17d6f56-9ad8-4ddf-832f-fb884f4626bc",
+      "title": "Special Notes/Information",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "81976128-db95-4384-a8e7-365ecc89e569",
+      "title": "SAP -Doc. Header Text",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "882d7525-5363-4bc5-8f50-72aacf429bee",
+      "title": "Original SAP Movement",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/rework_original_sap_movement_dropdown.workato_db_table.json",
+          "name": "Rework Original SAP Movement Dropdown",
+          "folder": "Test Import"
+        },
+        "field_id": "de41eaf8-97a3-4c5c-869d-28dbb22f62a1"
+      }
+    },
+    {
+      "id": "3117c335-4956-4c3b-8afe-68710b7d700b",
+      "title": "New SAP Movement",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/rework_new_sap_movement_dropdown.workato_db_table.json",
+          "name": "Rework New SAP Movement Dropdown",
+          "folder": "Test Import"
+        },
+        "field_id": "3f720987-1bd4-40d1-a712-9f6f74b91d15"
+      }
+    },
+    {
+      "id": "7129d853-b7a9-4dc8-b2b6-1f172f67fa4d",
+      "title": "Original SAP Document",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "c65a2b4f-ba4d-4d2e-9e14-732fc581255a",
+      "title": "New SAP Document",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "89f93fa6-be21-4b16-a2b3-5c2dc54fd3df",
+      "title": "Original SAP Long Text",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "960251a1-3d96-4e0f-bdf6-faae25547dd5",
+      "title": "New SAP Long Text",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "ac03fc56-9c09-420e-9371-91569f83ab19",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

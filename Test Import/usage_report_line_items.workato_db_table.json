@@ -1,0 +1,145 @@
+{
+  "name": "Usage Report Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "b075e94c-e173-4dbd-bde9-1aa834ae731d",
+      "title": "Invoice #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f753af02-cee6-4032-9665-263aa8e67696",
+      "title": "Date Produced",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "1c573216-caf7-482a-817d-770709893057",
+      "title": "P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f5530892-282b-40c8-99c8-dcef9fe5ee52",
+      "title": "Purchase Order",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "b807791c-0489-436f-bd15-e787b6867448",
+      "title": "Line Item",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5ce2babb-daa9-4a55-b647-f05e9e292af5",
+      "title": "Batch #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "89565edb-a759-4381-a1f9-574ba5e45ec2",
+      "title": "Process Order #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f10ff721-4574-411c-9c14-802cba365431",
+      "title": "Quantity Confirmed",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "19f571d7-29d3-4a65-973a-71403d70ecd3",
+      "title": "Complete/Not Complete",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "a856f96d-4d34-49b9-aff8-2e5cb91ed23c",
+      "title": "Comment",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5c1e240c-5716-444d-bedd-42e8ffa09594",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

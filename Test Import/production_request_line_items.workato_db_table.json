@@ -1,0 +1,221 @@
+{
+  "name": "Production Request Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "48796f65-868a-40f7-a9ed-e3f98e07f552",
+      "title": "Date",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "d4eb7f5e-825c-4d26-845c-c249964bcb0c",
+      "title": "Process Order",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5a089567-c54e-4733-a608-4c9efe9df0a7",
+      "title": "Quantity",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f8a2f14c-0ab6-42a9-97c4-17bb340d57c8",
+      "title": "Final / Partial Confirmation",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/final_partial_confirmation_drop_down.workato_db_table.json",
+          "name": "Final / Partial Confirmation Drop Down",
+          "folder": "Test Import"
+        },
+        "field_id": "073e22fd-ca9e-4e85-942e-3cce50588013"
+      }
+    },
+    {
+      "id": "844f44b3-7dc6-4e1b-9387-cdb013e67123",
+      "title": "BOL #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "6f8e896a-26e1-48d4-b746-85eba6a5e20b",
+      "title": "P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "73e7cc60-08bb-4e23-a834-122b36b58b81",
+      "title": "Purchase Order",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "0a05e301-243a-44a4-890b-ccb7e9b900ac",
+      "title": "Material Description",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "cbbd9408-7d2b-4d4a-968e-8315e99258b9",
+      "title": "Unit of Measure",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "df8c3277-61ff-4e36-9d78-bdcb08a0df15",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    },
+    {
+      "id": "05aafab6-042d-44fe-85be-80b5eaae086c",
+      "title": "Output SAP Document #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "e8499f19-9f2f-448a-bb10-3221a3a8f7d8",
+      "title": "Other",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "37c53a09-edd1-42f6-8b75-aa0866c2cd92",
+      "title": "Batch #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "acab1f6f-4ce9-4ea5-b4e0-caedd99507ed",
+      "title": "SAP Long Text",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "dce1bcc4-ff05-43df-a692-1ad3eb51d07d",
+      "title": "Purchase Order Item #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5b0f1998-3464-4256-8a19-9cdca3f90211",
+      "title": "SAP Document #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f830e2d4-1100-4b4e-bb0b-028926a1a7f4",
+      "title": "Comment",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/final_partial_confirmation_drop_down.workato_db_table.json",
+          "name": "Final / Partial Confirmation Drop Down",
+          "folder": "Test Import"
+        },
+        "field_id": "fb0610cd-3dea-42f2-b3e8-0607899bd100"
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

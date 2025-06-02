@@ -1,0 +1,267 @@
+{
+  "name": "Inventory Request Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "94c60965-6c2e-48bb-a287-2c19d33793df",
+      "title": "Date",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "241e1a2a-ad27-4e36-82a9-9dd5b7b3165a",
+      "title": "P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "120f1a6e-8522-49b5-a90e-e7d6b3c20d94",
+      "title": "Material Description",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "43caf0b3-70e0-41d1-8a71-bc3f4cd59323",
+      "title": "Unit of Measure",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "0d30b1c5-fbc9-4cfd-8a3f-730d63509ee4",
+      "title": "Batch#",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "4654b2df-36e4-4634-8067-c22917565c6c",
+      "title": "Adjustment Quantity",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "bffee211-856e-447c-b16f-66628a1083b5",
+      "title": "CM On Hand Inventory",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "14ed6ba9-0d4b-4da8-b7f4-d5a1920b1c09",
+      "title": "SAP Inventory",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "18aa4142-7433-4854-9d1b-76de3e5784b4",
+      "title": "Difference of CM On hand inv and SAP inv",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "dbec450b-e28c-4f94-8065-79992e74654a",
+      "title": "US $ Amount",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "7dea0e75-857f-48a1-8d41-07787b8893c7",
+      "title": "SAP Movement",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/sap_movement_dropdown.workato_db_table.json",
+          "name": "SAP movement dropdown",
+          "folder": "Test Import"
+        },
+        "field_id": "d9fa498d-e65c-4461-a14f-42f9568d3350"
+      }
+    },
+    {
+      "id": "e1f3cfa6-1695-40b1-a48f-c2c6f77bbf48",
+      "title": "SAP Doc. Header Text",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/sap_doc_header_text_drop_down.workato_db_table.json",
+          "name": "SAP Doc. Header Text Drop Down",
+          "folder": "Test Import"
+        },
+        "field_id": "ee321d26-9897-4105-aed4-b1d7320e2c4d"
+      }
+    },
+    {
+      "id": "5ef643cd-f432-4b63-b4b0-f27b3b14629b",
+      "title": "SAP Long Text",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/sap_long_text_dropdown.workato_db_table.json",
+          "name": "SAP Long - Text Dropdown",
+          "folder": "Test Import"
+        },
+        "field_id": "0884a38a-02bf-4dc9-ad97-bff9fa7b820f"
+      }
+    },
+    {
+      "id": "284d8728-86f5-41cd-a176-b4e1b30683fa",
+      "title": "Last Process Order Used",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "b76c3140-12f9-4fc0-b28c-043c04078689",
+      "title": "CM Comment",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "c649a0ec-bfc7-43a7-ab47-84ecfd26df01",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    },
+    {
+      "id": "28ed0361-d3cd-41de-b8ad-5e937e9b9a83",
+      "title": "Standard price",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "b5f599db-c8f2-410a-b97e-9027467a00b6",
+      "title": "SAP Document",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "83292bf6-4243-498a-8437-7fa5ef28c7d4",
+      "title": "Other - SAP Long - Text",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "bde1a91f-da8d-4729-94b6-4eadf6ac1172",
+      "title": "Inventory Increase/Decrease",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/inventory_request_increase_decrease.workato_db_table.json",
+          "name": "Inventory Request Increase/Decrease",
+          "folder": "Test Import"
+        },
+        "field_id": "43bd550d-fad1-48dc-affe-09d01b7cb701"
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

@@ -1,0 +1,191 @@
+{
+  "name": "Transfer Request Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "9cb90e5c-d8fe-4732-ba2e-271e065a61b3",
+      "title": "Date",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "9f1286f5-3ff9-4426-9cbe-61307d66f1fc",
+      "title": "P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "b3af80b8-9b86-46f8-8cf9-60eb77a48df0",
+      "title": "Material Description",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "3cda3699-2cca-4219-b08f-46963dac99a2",
+      "title": "Quantity",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "221df973-fa32-4140-a59f-12129fcd32bd",
+      "title": "UoM",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "64da067c-9535-4998-b966-b0a767c413ae",
+      "title": "Batch #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "7d257bb4-1cf6-420d-94c4-d785e8252f82",
+      "title": "Status",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/transfer_request_status.workato_db_table.json",
+          "name": "Transfer Request Status",
+          "folder": "Test Import"
+        },
+        "field_id": "466eb093-845b-43be-89e1-5f9a05952dcc"
+      }
+    },
+    {
+      "id": "8ccea03f-af0f-453a-81d2-aa01fc109865",
+      "title": "Destination St. Loc",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "fc685f84-e441-4670-9907-a7e98c5f641e",
+      "title": "Root Cause",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "c008aecf-5e29-4efb-ad30-7b04ad92f52e",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    },
+    {
+      "id": "798032f6-20f1-4d26-8891-e2cd381e3da3",
+      "title": "SAP Doc. Header Text",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "3fa0b158-ea84-40b7-8430-b744e40fb13e",
+      "title": "SAP Long Text",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "6a0deffa-0f46-44d3-be5b-72148bfe1420",
+      "title": "SAP Document",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "ef23ec0f-d6ee-4d39-8e1a-27c9135e6d7c",
+      "title": "SAP Movement",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/transfer_request_sap_movement_dropdown.workato_db_table.json",
+          "name": "Transfer Request SAP Movement Dropdown",
+          "folder": "Test Import"
+        },
+        "field_id": "6af29295-f84b-4b75-af1c-50f671fe3159"
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

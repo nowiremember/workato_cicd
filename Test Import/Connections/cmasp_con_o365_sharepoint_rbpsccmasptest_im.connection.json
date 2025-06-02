@@ -1,0 +1,5 @@
+{
+  "name": "[CMASP] CON - O365 Sharepoint - rbpsccmasptest.im",
+  "provider": "microsoft_sharepoint",
+  "root_folder": false
+}

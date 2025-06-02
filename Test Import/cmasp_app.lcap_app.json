@@ -1,0 +1,308 @@
+{
+  "name": "CMASP App",
+  "creation_page": null,
+  "workato_db_table": {
+    "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+    "name": "CMASP App",
+    "folder": "Test Import"
+  },
+  "workflow_stages": [
+    {
+      "name": "New",
+      "color": 0
+    },
+    {
+      "name": "Validation - Error",
+      "color": 3,
+      "page": {
+        "zip_name": "Test Import/Pages/request_validation_error.lcap_page.json",
+        "name": "Request - Validation Error",
+        "folder": "Test Import/Pages"
+      }
+    },
+    {
+      "name": "Validated",
+      "color": 4,
+      "page": {
+        "zip_name": "Test Import/Pages/request_validated.lcap_page.json",
+        "name": "Request - Validated",
+        "folder": "Test Import/Pages"
+      }
+    },
+    {
+      "name": "Pending Approval",
+      "color": 1,
+      "page": {
+        "zip_name": "Test Import/Pages/request_pending_approval.lcap_page.json",
+        "name": "Request - Pending Approval",
+        "folder": "Test Import/Pages"
+      }
+    },
+    {
+      "name": "Approved",
+      "color": 2
+    },
+    {
+      "name": "Processing Error",
+      "color": 3,
+      "page": {
+        "zip_name": "Test Import/Pages/request_pending_approval.lcap_page.json",
+        "name": "Request - Pending Approval",
+        "folder": "Test Import/Pages"
+      }
+    },
+    {
+      "name": "Completed",
+      "color": 2
+    },
+    {
+      "name": "Rejected",
+      "color": 3
+    },
+    {
+      "name": "Canceled",
+      "color": 0
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Workflow requests",
+      "kind": "new_request",
+      "visibility": "all"
+    },
+    {
+      "name": "Production",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Production/production_request_submit.lcap_page.json",
+        "name": "Production Request - Submit",
+        "folder": "Test Import/Pages/Production"
+      }
+    },
+    {
+      "name": "Inventory",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Inventory/inventory_request_submit.lcap_page.json",
+        "name": "Inventory Request- Submit",
+        "folder": "Test Import/Pages/Inventory"
+      }
+    },
+    {
+      "name": "Shipments Discrepancy",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Shipments Discrepancy/shipments_discrepancy_request_submit.lcap_page.json",
+        "name": "Shipments Discrepancy Request - Submit",
+        "folder": "Test Import/Pages/Shipments Discrepancy"
+      }
+    },
+    {
+      "name": "Transfer",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Transfer Request/transfer_request_submit.lcap_page.json",
+        "name": "Transfer Request - Submit",
+        "folder": "Test Import/Pages/Transfer Request"
+      }
+    },
+    {
+      "name": "Sales Sample / EO Run",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Sales/sales_sample_eo_run_submit.lcap_page.json",
+        "name": "Sales Sample, EO Run- Submit",
+        "folder": "Test Import/Pages/Sales"
+      }
+    },
+    {
+      "name": "Scrap",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Scrap/scrap_request_submit.lcap_page.json",
+        "name": "Scrap Request - Submit",
+        "folder": "Test Import/Pages/Scrap"
+      }
+    },
+    {
+      "name": "STSA Shipment",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/STSA Shipment/stsa_shipment_request_submit.lcap_page.json",
+        "name": "STSA Shipment Request - Submit",
+        "folder": "Test Import/Pages/STSA Shipment"
+      }
+    },
+    {
+      "name": "Receipts",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Receipts/receipts_request_submit.lcap_page.json",
+        "name": "Receipts Request - Submit",
+        "folder": "Test Import/Pages/Receipts"
+      }
+    },
+    {
+      "name": "Return to Vendor",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Return to Vendor/return_to_vendor_request_submit.lcap_page.json",
+        "name": "Return to Vendor Request - Submit",
+        "folder": "Test Import/Pages/Return to Vendor"
+      }
+    },
+    {
+      "name": "Consumption Adjustment",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Consumption Adjustment/consumption_request_submit.lcap_page.json",
+        "name": "Consumption Request- Submit",
+        "folder": "Test Import/Pages/Consumption Adjustment"
+      }
+    },
+    {
+      "name": "Rework",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Rework/rework_request_submit.lcap_page.json",
+        "name": "Rework Request - Submit",
+        "folder": "Test Import/Pages/Rework"
+      }
+    },
+    {
+      "name": "Monthly Inventory Reconciliation",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Monthly Inventory Reconciliation/monthly_inventory_reconciliation_request_submit.lcap_page.json",
+        "name": "Monthly Inventory Reconciliation Request - Submit",
+        "folder": "Test Import/Pages/Monthly Inventory Reconciliation"
+      }
+    },
+    {
+      "name": "Group Test",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Group Test/group_test_request_submit.lcap_page.json",
+        "name": "Group Test Request - Submit",
+        "folder": "Test Import/Pages/Group Test"
+      }
+    },
+    {
+      "name": "Usage Report",
+      "kind": "user_defined",
+      "visibility": "all",
+      "page": {
+        "zip_name": "Test Import/Pages/Usage Report/usage_report_submit.lcap_page.json",
+        "name": "Usage Report- Submit",
+        "folder": "Test Import/Pages/Usage Report"
+      }
+    }
+  ],
+  "displayed_columns": [
+    {
+      "id": "566d77ae-c072-49d0-8abd-6abc423d2580",
+      "visibility": "all"
+    },
+    {
+      "id": "27d11232-84fb-4560-aa90-ad4ed1be95d1",
+      "visibility": "nobody"
+    },
+    {
+      "id": "9748ab5c-ed88-4c89-a180-5f9482a13b94",
+      "visibility": "nobody"
+    },
+    {
+      "id": "3a5339b1-d89f-436e-a6a0-2fccf50a8734",
+      "visibility": "nobody"
+    },
+    {
+      "id": "CURRENT_STAGE",
+      "visibility": "all"
+    },
+    {
+      "id": "13e1c9af-77e3-40d7-b975-3ff73f56146b",
+      "visibility": "all"
+    },
+    {
+      "id": "CURRENT_TASK",
+      "visibility": "nobody"
+    },
+    {
+      "id": "ASSIGNED_TO",
+      "visibility": "all"
+    },
+    {
+      "id": "EXPIRES_AT",
+      "visibility": "all"
+    },
+    {
+      "id": "CREATED_BY",
+      "visibility": "all"
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "visibility": "all"
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "visibility": "all"
+    },
+    {
+      "id": "66affdc6-f254-460b-a7a8-a084c8bf77de",
+      "visibility": "nobody"
+    },
+    {
+      "id": "93d9ee8d-d72c-4e74-8202-acf04c30e51d",
+      "visibility": "nobody"
+    },
+    {
+      "id": "8707c956-3ac7-4452-b8dd-f61c9d8477ce",
+      "visibility": "nobody"
+    },
+    {
+      "id": "1a9de324-4466-4274-9496-6be199bc2bb6",
+      "visibility": "nobody"
+    },
+    {
+      "id": "4a060708-8448-42d0-861c-f033a5f35bae",
+      "visibility": "nobody"
+    },
+    {
+      "id": "ad802640-e174-45b3-90e2-b4d989c75faa",
+      "visibility": "nobody"
+    },
+    {
+      "id": "a1a712df-176e-42f9-a45d-6100496ff269",
+      "visibility": "all"
+    },
+    {
+      "id": "6aced24e-c3d9-448f-9f03-06eb2e3db69c",
+      "visibility": "nobody"
+    },
+    {
+      "id": "80650287-023f-40de-8aa8-467d9c1c60ef",
+      "visibility": "nobody"
+    },
+    {
+      "id": "ccf12147-cafa-4f98-be3c-ab97ec42d4cc",
+      "visibility": "nobody"
+    },
+    {
+      "id": "f3614f0d-cac7-4553-9fe2-e93bc34bec1a",
+      "visibility": "nobody"
+    }
+  ]
+}

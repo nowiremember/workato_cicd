@@ -1,0 +1,155 @@
+{
+  "name": "Vendor Receipt Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "23d75496-fc36-473d-8dba-cea09e45ac8b",
+      "title": "Receipt Date",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "4a6b7fc6-18a2-4553-a621-1ed109d4e972",
+      "title": "P&G GCAS#",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "1f5d568b-2807-419f-81a6-dd7a81b988be",
+      "title": "Scheduling Agreement/PO#",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "dbe41d9b-a67c-4bba-917c-659ea6fff94c",
+      "title": "BOL #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "df34c012-0636-4471-8efe-3b5ac87eb928",
+      "title": "Shipment ID",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5fc287c8-325a-45b0-9527-992d48e6f3ed",
+      "title": "Vendor Name",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f4cd94c7-e550-4c41-bbf7-4e8793ed7bea",
+      "title": "Description",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "d2bb4aa8-0463-457a-8353-289faf51d9aa",
+      "title": "UoM",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "d6d2b32f-a39b-4306-983f-779a6b31cc79",
+      "title": "BOL Stated Qty",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "4f5c4a66-8e59-4467-82d3-3c9e5c69aa8c",
+      "title": "Physically Received Qty",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "1aac45d9-864f-4371-83e2-5fc1d0da18db",
+      "title": "Variance",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "4931e354-9f10-4a10-9b6f-18de512ad5d8",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

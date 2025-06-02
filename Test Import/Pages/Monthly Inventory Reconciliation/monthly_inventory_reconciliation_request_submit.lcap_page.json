@@ -1,0 +1,298 @@
+{
+  "name": "Monthly Inventory Reconciliation Request - Submit",
+  "path": "monthly-inventory-reconciliation-request-submit",
+  "content": {
+    "background": {
+      "style": "pattern",
+      "pattern": "light-2"
+    },
+    "layout": [
+      1,
+      [
+        {
+          "id": "d8be4b6f",
+          "type": "container",
+          "name": "Container",
+          "x": 1,
+          "width": 11,
+          "visible": true,
+          "layout": [
+            1,
+            [
+              {
+                "id": "2c9b2072",
+                "type": "container",
+                "name": "Container 2",
+                "x": 0,
+                "width": 12,
+                "visible": true,
+                "layout": [
+                  1,
+                  [
+                    {
+                      "id": "6053bc53",
+                      "type": "image",
+                      "name": "Image",
+                      "x": 0,
+                      "width": 1,
+                      "height": 8,
+                      "visible": true,
+                      "image": "https://lcap-files-awsprod-us-east-1.s3.amazonaws.com/4kSYgAU6QDj16k8SJDsQN6/pages/uhnhAHbWuJu8kZcTyAiBWV/image/7w6aeA5kxrvzsLBn.png",
+                      "fitting": "contain",
+                      "horizontalAlignment": "center",
+                      "verticalAlignment": "center",
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "f31fada8",
+                      "type": "text",
+                      "name": "Text",
+                      "x": 1,
+                      "width": 6,
+                      "visible": true,
+                      "text": "# Monthly Inventory Reconciliation Request",
+                      "alignment": "left",
+                      "color": "#24434f",
+                      "validations": {
+                      }
+                    },
+                    3
+                  ],
+                  [
+                    {
+                      "id": "33be5cf9",
+                      "type": "text",
+                      "name": "Text 2",
+                      "x": 8,
+                      "width": 4,
+                      "visible": true,
+                      "text": "User:#{_dp('{\"source\":\"user\",\"path\":[\"email\"]}')}",
+                      "alignment": "right",
+                      "color": "#24434f",
+                      "validations": {
+                      }
+                    },
+                    3
+                  ],
+                  [
+                    {
+                      "id": "c5f9bcac",
+                      "type": "file",
+                      "name": "Attachment",
+                      "x": 8,
+                      "width": 4,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Attachment",
+                        "type": "file"
+                      },
+                      "label": "Attachment",
+                      "hint": "",
+                      "mode": "upload",
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        },
+                        "fileSize": {
+                          "max": 10
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "ac6076d6",
+                      "type": "input",
+                      "name": "Plant #",
+                      "x": 0,
+                      "width": 3,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Plant #",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Plant #",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text",
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    1
+                  ],
+                  [
+                    {
+                      "id": "a0b8e826",
+                      "type": "input",
+                      "name": "Storage Location",
+                      "x": 0,
+                      "width": 3,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Storage Location",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Storage Location",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text",
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "86811d3a",
+                      "type": "file",
+                      "name": "Batch File Upload",
+                      "x": 8,
+                      "width": 4,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Batch File Upload",
+                        "type": "file"
+                      },
+                      "label": "Batch Upload (.csv)",
+                      "hint": "",
+                      "mode": "upload",
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        },
+                        "fileSize": {
+                          "max": 10
+                        },
+                        "allowedFiles": {
+                          "type": "custom",
+                          "extensions": [
+                            "csv"
+                          ]
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "baf4d1c4",
+                      "type": "input",
+                      "name": "Site Leader Email",
+                      "x": 0,
+                      "width": 3,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Site Leader Email",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Site Leader Email",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text",
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "b1e2b8c3",
+                      "type": "dropdown",
+                      "name": "Request Type",
+                      "x": 0,
+                      "width": 5,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Request Type",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Request Type",
+                      "hint": "",
+                      "placeholder": "Choose an option",
+                      "options": [
+                        {
+                          "title": "Monthly Inventory Reconciliation ",
+                          "value": "Monthly Inventory Reconciliation "
+                        }
+                      ],
+                      "dataSourceOptions": null,
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    1
+                  ],
+                  [
+                    {
+                      "id": "f253c8ce",
+                      "type": "divider",
+                      "name": "Divider",
+                      "x": 0,
+                      "width": 12,
+                      "visible": true,
+                      "backgroundColor": "#ced5db",
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "f4a70061",
+                      "type": "button",
+                      "name": "Button",
+                      "x": 10,
+                      "width": 2,
+                      "visible": true,
+                      "label": "Validate",
+                      "style": "filled",
+                      "action": {
+                        "type": "save-data"
+                      },
+                      "validations": {
+                      }
+                    },
+                    0
+                  ]
+                ],
+                "backgroundColor": "#ffffff",
+                "borderColor": "transparent",
+                "padding": "none",
+                "validations": {
+                }
+              },
+              2
+            ]
+          ],
+          "backgroundColor": "#ffffff",
+          "borderColor": "#ced5db",
+          "padding": "large",
+          "validations": {
+          }
+        },
+        1
+      ]
+    ],
+    "type": "common"
+  }
+}
