@@ -1,0 +1,108 @@
+{
+  "name": "Monthly Inventory Reconciliation Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "d0ac70ec-041a-4f7b-8a77-0aaa9ac0ee75",
+      "title": "P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "4c416826-d3a2-4db4-848f-3d660c50f56c",
+      "title": "Material Description",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "08cbf0a6-28ac-4b55-93e6-b7b8ea4544f7",
+      "title": "Unit of Measure",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "51d2bbfb-7fb1-4301-b9b6-43c31b1196b7",
+      "title": "Count Unrestricted",
+      "type": "number",
+      "default_value": 0.0,
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "aa9e4ff5-864c-4539-8c30-c6dd084e70ee",
+      "title": "Count Blocked",
+      "type": "number",
+      "default_value": 0.0,
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "36de8489-2d4b-4151-a845-e8eb6dea57b7",
+      "title": "Count Quality Inspect",
+      "type": "number",
+      "default_value": 0.0,
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "85bfec96-0b47-4301-88da-7685abedcc15",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

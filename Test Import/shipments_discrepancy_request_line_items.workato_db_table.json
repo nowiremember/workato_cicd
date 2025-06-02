@@ -1,0 +1,263 @@
+{
+  "name": "Shipments Discrepancy Request Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "125eea95-3769-420a-a148-12ba103b2fea",
+      "title": "Shipment Date",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5a902c94-c7b8-4f88-8069-299fbbc62f1b",
+      "title": "P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f8eb3c2d-93ce-4220-a146-3594fef934b2",
+      "title": "Material Description",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "0b2d7ed6-8e01-41dc-a904-79d742191021",
+      "title": "Batch #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "048c633d-87ef-450d-824d-ddc314b6da22",
+      "title": "BOL #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "a91d4021-ce50-42cc-ac2e-cf28784d60cc",
+      "title": "Scheduling Agreement #/PO#",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f13aae9c-ede4-4b05-8902-adc3ab308633",
+      "title": "Shipping Site Number",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f5b04f05-4fa0-43c8-879d-aec94577de0f",
+      "title": "Receiving Site Number",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "aca09f28-5570-4fee-a515-6f737f779d85",
+      "title": "Physically Shipped/Received Quantity",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "ae78141c-85d0-4137-a8c7-02691021e64a",
+      "title": "SAP Shipped/Received Qty",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "7da56624-8f42-43a8-aca5-c7cde2b3a29a",
+      "title": "UoM",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "c4f1bcc4-615c-4fe7-bf60-aaf9afba2c78",
+      "title": "Variance",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "d42d9354-8e3a-4d8c-90aa-7cc59116748a",
+      "title": "CM Comment",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "e9163cc7-5a45-40d9-aaba-7ecbddab281e",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    },
+    {
+      "id": "35cbf681-31bb-4f82-bc96-0c17c1fd5e91",
+      "title": "SAP Doc. Header Text",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "f76e4e52-eb6c-4236-b566-850bca0be24d",
+      "title": "Comments",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "7d9cbb65-937a-4d85-ab27-213eef78cf27",
+      "title": "SAP Movement",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/shipment_discrepancy_sap_movement_dropdown.workato_db_table.json",
+          "name": "Shipment Discrepancy SAP Movement Dropdown",
+          "folder": "Test Import"
+        },
+        "field_id": "1dd3eb10-f52e-4289-aaf1-4e8b8a0d46b3"
+      }
+    },
+    {
+      "id": "dd9c0f5d-0993-49d7-a0fd-056b50c83288",
+      "title": "SAP Long Text",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "c5a915a7-c9c5-48cb-a709-14e605e23e5c",
+      "title": "US Dollar Amount",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "ca093b50-199c-484a-a12d-9905f392988e",
+      "title": "SAP Document",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "599fa605-ffbe-468d-b214-cf3ae539ed34",
+      "title": "Purchase Order Item #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "e7f6f791-a14a-423b-aac8-85587d1a8ea5",
+      "title": "Purchase Order",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

@@ -1,0 +1,223 @@
+{
+  "name": "Sales Request Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "9e2a93f7-9f0d-4948-8779-b96cb19425a6",
+      "title": "Date",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "996af1f6-2f72-4a7f-a218-d4d33479876f",
+      "title": "P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "bd5a09ec-cff9-4c07-b357-0a908876ac19",
+      "title": "Description",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "0aa40bac-15f9-4fa4-90d2-07908e79b9f1",
+      "title": "Batch#",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "db687394-7cbe-49fd-99a3-42628cd07f4d",
+      "title": "Quantity",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "1a2f75af-7b2c-4f1d-b58e-196ad1047a8b",
+      "title": "UoM",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "7e782eba-c6eb-4220-9166-b7f8a7a95f36",
+      "title": "Cost Center / IO Number",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "b43b9ef4-17e1-42fb-bc6d-1f1e47855b45",
+      "title": "GL Account number",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "70e2f1d4-3b23-4eed-878a-ad95d0018ec0",
+      "title": "Requested By:  Example: R&D  - P&G Name",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5387d1d1-7c91-42b6-85fa-c1efa139b1a4",
+      "title": "Destination Plant",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "9379dbd5-e9e9-4320-afdf-2b9932484cbb",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    },
+    {
+      "id": "97887f19-0e7d-401e-b76c-10533a31b694",
+      "title": "Standard Price",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "b79cc251-382e-4066-88d1-20dbd0cfcd9c",
+      "title": "Dollar Amount",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "ff6589a5-3b3d-4b95-86a8-2b336438d919",
+      "title": "SAP movement",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/sales_sap_movement_dropdown.workato_db_table.json",
+          "name": "Sales SAP movement dropdown",
+          "folder": "Test Import"
+        },
+        "field_id": "650c7493-edbf-4eea-9348-444744daa691"
+      }
+    },
+    {
+      "id": "8f50ddfd-6068-426f-8386-9de9b7d981f8",
+      "title": "SAP - Doc. Header Text",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "b45019cb-aebb-443c-bf0b-6e4886f97304",
+      "title": "SAP Long - Text",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "fb226af4-c24f-442b-a105-f294dd236875",
+      "title": "Comment",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "abb154b2-2bb3-4500-996c-f5fa4995cc72",
+      "title": "SAP Document",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

@@ -1,0 +1,233 @@
+{
+  "name": "Return to Vendor Request Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "0068573b-d09f-4783-91a7-acee7219656d",
+      "title": "Date",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "8bf11c80-d971-4496-8b43-82773d2b98ab",
+      "title": "P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "a0776099-37e9-47bb-84c8-2978d1ff3ced",
+      "title": "Material Description",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "c1fc1a3b-e386-48bb-a4dc-9321127352cb",
+      "title": "UoM",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5e5cce5b-a5b5-4fbf-81bb-73358f0a7c23",
+      "title": "Return Quantity",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "8f90e9a8-af70-4e2c-8ddf-3d6146b11c6e",
+      "title": "Scheduling Agreement",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "90f71abd-15ca-4815-b93c-23d5eab3bc77",
+      "title": "Vendor",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "bbd21bd5-47fe-4ca9-9066-f6d8b8c75898",
+      "title": "Original Bill of Lading",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "eba841ea-30a5-4a4e-a004-f28c55d44409",
+      "title": "Return BOL #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "598ffd86-8b71-456b-aadc-2b20d6e00014",
+      "title": "Return Authorization Number",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "638bf4fa-3ebf-4aee-9752-a26b34ec5e05",
+      "title": "Vendor Contact Name",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5ad936b7-465f-4332-b008-0e58b959acb0",
+      "title": "Vendor Contact Email",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5310a4db-f8df-42d0-a908-393d7eee4573",
+      "title": "Material Doc #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "af5ba149-948c-4182-a314-2a345b98dad2",
+      "title": "S = Blocked Blank = Unres",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "4f1ff91a-8fb1-47bd-a2a7-a5c88e5b7daa",
+      "title": "US Dollar Amount",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "50e28533-fe0a-4fa3-b6a4-683952c834e0",
+      "title": "SAP Movement",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/return_to_vendor_sap_movement_dropdown.workato_db_table.json",
+          "name": "Return to Vendor SAP Movement Dropdown",
+          "folder": "Test Import"
+        },
+        "field_id": "9cfa1093-25c8-41ed-84a7-a0192aa8efd3"
+      }
+    },
+    {
+      "id": "d9df842c-a73c-47b4-80f2-f4d50a30e3b0",
+      "title": "Line",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "769d7a33-e369-429f-92c6-d5b829f057b6",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    },
+    {
+      "id": "e3f92560-d459-4c57-85da-c97b9785b4e7",
+      "title": "SAP Document",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

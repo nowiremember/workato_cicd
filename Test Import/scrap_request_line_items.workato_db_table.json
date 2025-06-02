@@ -1,0 +1,223 @@
+{
+  "name": "Scrap Request Line Items",
+  "schema": [
+    {
+      "id": "11fbe9a6-a16d-4d7e-86ea-afe42ec03005",
+      "title": "Record ID",
+      "type": "short-text",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "a5612739-5401-4ae7-bd07-782c1a6fb2d1",
+      "title": "Created time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "61aae604-a95e-4519-9091-bb0bf754a67f",
+      "title": "Last modified time",
+      "type": "date-time",
+      "read_only": true,
+      "hidden": true
+    },
+    {
+      "id": "8ad6de97-5529-42fa-aee3-cc2727725056",
+      "title": "Date",
+      "type": "date",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "8be3ad25-ec76-49df-81ea-dfac8f43fe46",
+      "title": "P&G GCAS #",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5b9588ac-a78f-41d4-aa8f-882fd53dfd0f",
+      "title": "Material Description",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "9fb626c7-d673-4d1c-ac16-12745c4136cf",
+      "title": "Quantity",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "18f5f85f-df56-4bb3-bee2-ce75762ab9de",
+      "title": "UoM",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "3bcedd35-04fa-4854-b83a-e15c305780d8",
+      "title": "Batch#",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5e2df7a3-b314-47af-a9bb-76fd015e656d",
+      "title": "BOL#",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "a242b5a5-3210-40f0-b083-5d206e7aeea3",
+      "title": "Steam Number",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "5550f389-f1bf-46e8-9087-b7f77d16efc8",
+      "title": "Site Leader Name",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "3537e02c-87a0-4901-a050-d21cdd46196d",
+      "title": "Comments",
+      "type": "long-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "625e8d04-898d-4a4a-b7ae-65f44c04cc84",
+      "title": "CMASP App ID",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/cmasp_app.workato_db_table.json",
+          "name": "CMASP App",
+          "folder": "Test Import"
+        },
+        "field_id": "27d11232-84fb-4560-aa90-ad4ed1be95d1"
+      }
+    },
+    {
+      "id": "fba18a2d-881f-4a23-ae09-1c94d83d0b4e",
+      "title": "POD#",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "1773110c-00f7-4261-8c65-358a8be3fd41",
+      "title": "SAP (ZD16) Qty Unrestricted",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "ed91b20f-f8d5-43f4-94da-51e112d3f1ad",
+      "title": "SAP (ZD16) Qty Blocked",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "546db707-cfa6-4b50-892a-10de6ee71a92",
+      "title": "SAP (ZD16) Qty Quality Inspect",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "08114cc0-1ec3-47ea-bd98-bfe170e12f70",
+      "title": "SAP Movement",
+      "type": "relation",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      },
+      "relation": {
+        "table_id": {
+          "zip_name": "Test Import/scrap_sap_movement_dropdown.workato_db_table.json",
+          "name": "Scrap SAP Movement Dropdown",
+          "folder": "Test Import"
+        },
+        "field_id": "bf28992d-9864-4890-b002-5e30d1c07f2d"
+      }
+    },
+    {
+      "id": "9902feee-547b-4ed8-a0e0-456b5cecf2fb",
+      "title": "Dollar Amount",
+      "type": "number",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    },
+    {
+      "id": "226ea2bc-be41-43ab-b6f1-e958c8fe7726",
+      "title": "SAP Document",
+      "type": "short-text",
+      "read_only": false,
+      "hidden": false,
+      "required": false,
+      "metadata": {
+      }
+    }
+  ],
+  "project_name": "Test Import"
+}

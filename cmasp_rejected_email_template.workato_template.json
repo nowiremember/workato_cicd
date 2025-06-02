@@ -1,0 +1,27 @@
+{
+  "name": "[CMASP] Rejected Email Template",
+  "schema": [
+    {
+      "control_type": "text",
+      "label": "Cmasp number",
+      "name": "cmasp_number",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "control_type": "text",
+      "label": "Request type",
+      "name": "request_type",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "control_type": "text",
+      "label": "Rejection reason",
+      "name": "rejection_reason",
+      "type": "string",
+      "optional": false
+    }
+  ],
+  "content": "<!DOCTYPE html>\n<html>\n  <head>\n<style>\ntable, th, td {\n  border: 1px solid black;\n  border-collapse: collapse;\n}\n</style>\n</head>\n<body>\n    <p>Hello,</p>\n\n  <p>CMASP Number: {{cmasp_number}}<br>  \n  <p>{{request_type}} was rejected for the following reason:<br>\n  {{rejection_reason}}<br>\n  If you have any questions please reach out to your ESS Site Leader and your PEWO contact.\n  </p>\n\n    \n    \n  </p>\n            \n</body>\n</html>"
+}

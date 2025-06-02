@@ -1,0 +1,70 @@
+{
+  "name": "[CMASP] Approval Email Template",
+  "schema": [
+    {
+      "control_type": "text",
+      "label": "Cmasp number",
+      "name": "cmasp_number",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "control_type": "text",
+      "label": "Plant",
+      "name": "plant",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "control_type": "text",
+      "label": "Storage location",
+      "name": "storage_location",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "control_type": "text",
+      "label": "Request type",
+      "name": "request_type",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "rows",
+      "type": "array",
+      "of": "object",
+      "label": "Rows",
+      "optional": true,
+      "properties": [
+        {
+          "control_type": "text",
+          "label": "Sap document",
+          "name": "sap_document",
+          "type": "string",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "control_type": "checkbox",
+      "label": "Sap document table",
+      "render_input": {
+      },
+      "parse_output": {
+      },
+      "name": "sap_document_table",
+      "type": "boolean",
+      "optional": true,
+      "toggle_hint": "Select from option list",
+      "toggle_field": {
+        "label": "Sap document table",
+        "control_type": "text",
+        "toggle_hint": "Use custom value",
+        "name": "sap_document_table",
+        "type": "boolean",
+        "optional": false
+      }
+    }
+  ],
+  "content": "<!DOCTYPE html>\n<html>\n  <head>\n<style>\ntable, th, td {\n  border: 1px solid black;\n  border-collapse: collapse;\n}\n</style>\n</head>\n<body>\n    <p>Hello,</p>\n\n    <p>{{request_type}} successfully completed in SAP.</p>\n\n    <p>CMASP Number: {{cmasp_number}}<br>\n    Plant#: {{plant}}<br>\n    {{#storage_location}}\n    Storage Location: {{storage_location}}</p>\n      {{/storage_location}}\n  {{^storage_location}}\n  <p>\n  \t{{/storage_location}}\n  {{#sap_document_table}}\n   <table border=1>\n     <tbody>\n       <tr>\n         <td>SAP Document#</td>\n       </tr>\n       {{#rows}}\n       <tr>\n         <td>{{sap_document}}</td>\n       </tr>\n       {{/rows}}\n     </tbody>\n  </table>  \n    {{/sap_document_table}}\n  {{^sap_document_table}}\n  {{/sap_document_table}}\n\n</body>\n</html>"
+}

@@ -1,0 +1,1292 @@
+{
+  "name": "Request - Validation Error",
+  "path": "request-validation-error",
+  "content": {
+    "background": {
+      "style": "pattern",
+      "pattern": "light-2"
+    },
+    "layout": [
+      1,
+      [
+        {
+          "id": "d8be4b6f",
+          "type": "container",
+          "name": "Container",
+          "x": 1,
+          "width": 11,
+          "visible": true,
+          "layout": [
+            1,
+            [
+              {
+                "id": "2c9b2072",
+                "type": "container",
+                "name": "Container 2",
+                "x": 0,
+                "width": 12,
+                "visible": true,
+                "layout": [
+                  1,
+                  [
+                    {
+                      "id": "6053bc53",
+                      "type": "image",
+                      "name": "Image",
+                      "x": 0,
+                      "width": 1,
+                      "height": 8,
+                      "visible": true,
+                      "image": "https://lcap-files-awsprod-us-east-1.s3.amazonaws.com/4kSYgAU6QDj16k8SJDsQN6/pages/gFa4mMAzdxmNkNH7tCuEAE/image/7w6aeA5kxrvzsLBn.png",
+                      "fitting": "contain",
+                      "horizontalAlignment": "center",
+                      "verticalAlignment": "center",
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "f31fada8",
+                      "type": "text",
+                      "name": "Text",
+                      "x": 1,
+                      "width": 4,
+                      "visible": true,
+                      "text": "# #{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                      "alignment": "left",
+                      "color": "#24434f",
+                      "validations": {
+                      }
+                    },
+                    3
+                  ],
+                  [
+                    {
+                      "id": "d6bc294f",
+                      "type": "text",
+                      "name": "Text 3",
+                      "x": 7,
+                      "width": 5,
+                      "visible": true,
+                      "text": "User:#{_dp('{\"source\":\"user\",\"path\":[\"email\"]}')}",
+                      "alignment": "right",
+                      "color": "#24434f",
+                      "validations": {
+                      }
+                    },
+                    3
+                  ],
+                  [
+                    {
+                      "id": "baa9c1ba",
+                      "type": "input",
+                      "name": "CMASP Number",
+                      "x": 0,
+                      "width": 6,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "CMASP Number",
+                        "type": "short-text"
+                      },
+                      "editable": false,
+                      "label": "CMASP Number",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text",
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        }
+                      }
+                    },
+                    1
+                  ],
+                  [
+                    {
+                      "id": "083f041c",
+                      "type": "text",
+                      "name": "Text 2",
+                      "x": 8,
+                      "width": 4,
+                      "visible": [
+                        1,
+                        [
+                          13,
+                          "#{_dp('{\"source\":\"request\",\"path\":[\"field\",\"80650287-023f-40de-8aa8-467d9c1c60ef\"]}')}"
+                        ]
+                      ],
+                      "text": "#{_dp('{\"source\":\"request\",\"path\":[\"field\",\"80650287-023f-40de-8aa8-467d9c1c60ef\"]}')}",
+                      "alignment": "left",
+                      "color": "#da3b1c",
+                      "validations": {
+                      }
+                    },
+                    4
+                  ],
+                  [
+                    {
+                      "id": "601cd7ee",
+                      "type": "file",
+                      "name": "Attachment",
+                      "x": 8,
+                      "width": 4,
+                      "visible": [
+                        1,
+                        [
+                          13,
+                          "#{_dp('{\"source\":\"request\",\"path\":[\"field\",\"70136a28-d163-45f1-865c-5c3c879dd140\"]}')}"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "Attachment",
+                        "type": "file"
+                      },
+                      "label": "Attachment",
+                      "hint": "",
+                      "mode": "download",
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        },
+                        "fileSize": {
+                          "max": 10
+                        }
+                      }
+                    },
+                    1
+                  ],
+                  [
+                    {
+                      "id": "ac6076d6",
+                      "type": "input",
+                      "name": "Plant #",
+                      "x": 0,
+                      "width": 3,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Plant #",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Plant #",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text",
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "5af6d93a",
+                      "type": "file",
+                      "name": "FileUpload",
+                      "x": 8,
+                      "width": 4,
+                      "visible": [
+                        2,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Scrapped Offsite (BOL)"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Return to Vendor"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "FileUpload",
+                        "type": "file"
+                      },
+                      "label": "BOL File Upload",
+                      "hint": "",
+                      "mode": "upload",
+                      "validations": {
+                        "required": {
+                          "condition": [
+                            2,
+                            [
+                              7,
+                              "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                              "Scrapped Offsite (BOL)"
+                            ],
+                            [
+                              7,
+                              "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                              "Return to Vendor"
+                            ]
+                          ]
+                        },
+                        "fileSize": {
+                          "max": 10
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "a0b8e826",
+                      "type": "input",
+                      "name": "Storage Location",
+                      "x": 0,
+                      "width": 3,
+                      "visible": [
+                        2,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Production Reversal"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Inventory Adjustment"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Shipment Qty Discrepancy"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Transfer Request"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Sales Sample, EO Run"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Scrapped Offsite (BOL)"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Scrapped Onsite (POD)"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "STSA Shipment Reversal"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Receipt Reversal"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Return to Vendor"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Consumption Adjustment (Batch)"
+                        ],
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Rework"
+                        ],
+                        [
+                          1,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Monthly Inventory Reconciliation"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "Storage Location",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Storage Location",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text",
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "67bbe95e",
+                      "type": "input",
+                      "name": "Site Leader Email",
+                      "x": 0,
+                      "width": 3,
+                      "visible": [
+                        1,
+                        [
+                          13,
+                          "#{_dp('{\"source\":\"request\",\"path\":[\"field\",\"5c10fa30-df05-4ce0-aef8-d795f3d647eb\"]}')}"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "Site Leader Email",
+                        "type": "short-text"
+                      },
+                      "editable": true,
+                      "label": "Site Leader Email",
+                      "hint": "",
+                      "placeholder": "",
+                      "style": "short-text",
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    1
+                  ],
+                  [
+                    {
+                      "id": "c8a17d52",
+                      "type": "file",
+                      "name": "FileUpload 2",
+                      "x": 8,
+                      "width": 4,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Scrapped Onsite (POD)"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "FileUpload",
+                        "type": "file"
+                      },
+                      "label": "POD File Upload",
+                      "hint": "",
+                      "mode": "upload",
+                      "validations": {
+                        "required": {
+                          "condition": [
+                            1,
+                            [
+                              7,
+                              "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                              "Scrapped Onsite (POD)"
+                            ]
+                          ]
+                        },
+                        "fileSize": {
+                          "max": 10
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "5b181eb1",
+                      "type": "dropdown",
+                      "name": "Request Type",
+                      "x": 0,
+                      "width": 5,
+                      "visible": true,
+                      "dataSource": {
+                        "id": "Request Type",
+                        "type": "short-text"
+                      },
+                      "editable": false,
+                      "label": "Request Type",
+                      "hint": "",
+                      "placeholder": "Choose an option",
+                      "options": [
+                        {
+                          "title": "Production Run",
+                          "value": "Production Run"
+                        },
+                        {
+                          "title": "Production Reversal",
+                          "value": "Production Reversal"
+                        }
+                      ],
+                      "dataSourceOptions": null,
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        }
+                      }
+                    },
+                    1
+                  ],
+                  [
+                    {
+                      "id": "a3c623ba",
+                      "type": "container",
+                      "name": "Container 3",
+                      "x": 0,
+                      "width": 8,
+                      "visible": [
+                        1,
+                        [
+                          13,
+                          "#{_dp('{\"source\":\"request\",\"path\":[\"field\",\"80650287-023f-40de-8aa8-467d9c1c60ef\"]}')}"
+                        ]
+                      ],
+                      "layout": [
+                        1,
+                        [
+                          {
+                            "id": "48ac583c",
+                            "type": "text",
+                            "name": "Text 5",
+                            "x": 0,
+                            "width": 12,
+                            "visible": [
+                              1,
+                              [
+                                13,
+                                "#{_dp('{\"source\":\"request\",\"path\":[\"field\",\"80650287-023f-40de-8aa8-467d9c1c60ef\"]}')}"
+                              ]
+                            ],
+                            "text": "**Validation Error(s):**\n#{_dp('{\"source\":\"request\",\"path\":[\"field\",\"80650287-023f-40de-8aa8-467d9c1c60ef\"]}')}",
+                            "alignment": "left",
+                            "color": "#da3b1c",
+                            "validations": {
+                            }
+                          },
+                          0
+                        ]
+                      ],
+                      "backgroundColor": "#fcded9",
+                      "borderColor": "#f4a293",
+                      "padding": "small",
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "81bec90f",
+                      "type": "file",
+                      "name": "Vendor Validation",
+                      "x": 8,
+                      "width": 4,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Return to Vendor"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "Vendor Validation",
+                        "type": "file"
+                      },
+                      "label": "Vendor Validation",
+                      "hint": "",
+                      "mode": "upload",
+                      "validations": {
+                        "required": {
+                          "condition": false
+                        },
+                        "fileSize": {
+                          "max": 10
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "36edfe7b",
+                      "type": "file",
+                      "name": "FileUpload 3",
+                      "x": 8,
+                      "width": 4,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Rework"
+                        ]
+                      ],
+                      "dataSource": {
+                        "id": "FileUpload",
+                        "type": "file"
+                      },
+                      "label": "Rework Protocol",
+                      "hint": "",
+                      "mode": "upload",
+                      "validations": {
+                        "required": {
+                          "condition": true
+                        },
+                        "fileSize": {
+                          "max": 10
+                        }
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "e1df15f9",
+                      "type": "divider",
+                      "name": "Divider",
+                      "x": 0,
+                      "width": 12,
+                      "visible": true,
+                      "backgroundColor": "#ced5db",
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "32399d90",
+                      "type": "table",
+                      "name": "Production Request Line Items",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Production"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Production",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/production_request_line_items.workato_db_table.json",
+                        "name": "Production Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "df8c3277-61ff-4e36-9d78-bdcb08a0df15",
+                      "visibleColumnsIds": [
+                        "48796f65-868a-40f7-a9ed-e3f98e07f552",
+                        "d4eb7f5e-825c-4d26-845c-c249964bcb0c",
+                        "5a089567-c54e-4733-a608-4c9efe9df0a7",
+                        "f8a2f14c-0ab6-42a9-97c4-17bb340d57c8",
+                        "844f44b3-7dc6-4e1b-9387-cdb013e67123"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "93a27663",
+                      "type": "table",
+                      "name": "Production Request Line Items 2",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Production Reversal"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Production Reversal",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/production_request_line_items.workato_db_table.json",
+                        "name": "Production Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "df8c3277-61ff-4e36-9d78-bdcb08a0df15",
+                      "visibleColumnsIds": [
+                        "48796f65-868a-40f7-a9ed-e3f98e07f552",
+                        "5b0f1998-3464-4256-8a19-9cdca3f90211",
+                        "6f8e896a-26e1-48d4-b746-85eba6a5e20b",
+                        "5a089567-c54e-4733-a608-4c9efe9df0a7",
+                        "37c53a09-edd1-42f6-8b75-aa0866c2cd92",
+                        "73e7cc60-08bb-4e23-a834-122b36b58b81",
+                        "d4eb7f5e-825c-4d26-845c-c249964bcb0c",
+                        "844f44b3-7dc6-4e1b-9387-cdb013e67123",
+                        "354b6f1c-5544-47b9-904b-5886f5094508",
+                        "e8499f19-9f2f-448a-bb10-3221a3a8f7d8"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "e14ee0d0",
+                      "type": "table",
+                      "name": "Table",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"request\",\"path\":[\"field\",\"13e1c9af-77e3-40d7-b975-3ff73f56146b\"]}')}",
+                          "Inventory Adjustment"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Inventory Request",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/inventory_request_line_items.workato_db_table.json",
+                        "name": "Inventory Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "c649a0ec-bfc7-43a7-ab47-84ecfd26df01",
+                      "visibleColumnsIds": [
+                        "94c60965-6c2e-48bb-a287-2c19d33793df",
+                        "241e1a2a-ad27-4e36-82a9-9dd5b7b3165a",
+                        "4654b2df-36e4-4634-8067-c22917565c6c",
+                        "bffee211-856e-447c-b16f-66628a1083b5",
+                        "bde1a91f-da8d-4729-94b6-4eadf6ac1172",
+                        "0d30b1c5-fbc9-4cfd-8a3f-730d63509ee4",
+                        "b76c3140-12f9-4fc0-b28c-043c04078689"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "1148f2ee",
+                      "type": "table",
+                      "name": "Shipment Qty Discrepancy",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Shipment Qty Discrepancy"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Shipment Qty Discrepancy",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/shipments_discrepancy_request_line_items.workato_db_table.json",
+                        "name": "Shipments Discrepancy Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "e9163cc7-5a45-40d9-aaba-7ecbddab281e",
+                      "visibleColumnsIds": [
+                        "125eea95-3769-420a-a148-12ba103b2fea",
+                        "5a902c94-c7b8-4f88-8069-299fbbc62f1b",
+                        "0b2d7ed6-8e01-41dc-a904-79d742191021",
+                        "048c633d-87ef-450d-824d-ddc314b6da22",
+                        "a91d4021-ce50-42cc-ac2e-cf28784d60cc",
+                        "f13aae9c-ede4-4b05-8902-adc3ab308633",
+                        "f5b04f05-4fa0-43c8-879d-aec94577de0f",
+                        "aca09f28-5570-4fee-a515-6f737f779d85",
+                        "ae78141c-85d0-4137-a8c7-02691021e64a",
+                        "d42d9354-8e3a-4d8c-90aa-7cc59116748a"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "15acb445",
+                      "type": "table",
+                      "name": "Transfer Request Line Items",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Transfer Request"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Transfer Request",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/transfer_request_line_items.workato_db_table.json",
+                        "name": "Transfer Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "c008aecf-5e29-4efb-ad30-7b04ad92f52e",
+                      "visibleColumnsIds": [
+                        "9cb90e5c-d8fe-4732-ba2e-271e065a61b3",
+                        "9f1286f5-3ff9-4426-9cbe-61307d66f1fc",
+                        "3cda3699-2cca-4219-b08f-46963dac99a2",
+                        "64da067c-9535-4998-b966-b0a767c413ae",
+                        "7d257bb4-1cf6-420d-94c4-d785e8252f82",
+                        "8ccea03f-af0f-453a-81d2-aa01fc109865",
+                        "fc685f84-e441-4670-9907-a7e98c5f641e"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "7a3e5eac",
+                      "type": "table",
+                      "name": "Table 2",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Sales Sample, EO Run"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Sales Sample, EO Run",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/sales_request_line_items.workato_db_table.json",
+                        "name": "Sales Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "9379dbd5-e9e9-4320-afdf-2b9932484cbb",
+                      "visibleColumnsIds": [
+                        "9e2a93f7-9f0d-4948-8779-b96cb19425a6",
+                        "996af1f6-2f72-4a7f-a218-d4d33479876f",
+                        "0aa40bac-15f9-4fa4-90d2-07908e79b9f1",
+                        "db687394-7cbe-49fd-99a3-42628cd07f4d",
+                        "7e782eba-c6eb-4220-9166-b7f8a7a95f36",
+                        "b43b9ef4-17e1-42fb-bc6d-1f1e47855b45",
+                        "70e2f1d4-3b23-4eed-878a-ad95d0018ec0",
+                        "5387d1d1-7c91-42b6-85fa-c1efa139b1a4",
+                        "fb226af4-c24f-442b-a105-f294dd236875"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "f0e29c9d",
+                      "type": "table",
+                      "name": "Table 3",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Scrapped Offsite (BOL)"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Scrap BOL Request",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/scrap_request_line_items.workato_db_table.json",
+                        "name": "Scrap Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "625e8d04-898d-4a4a-b7ae-65f44c04cc84",
+                      "visibleColumnsIds": [
+                        "8ad6de97-5529-42fa-aee3-cc2727725056",
+                        "8be3ad25-ec76-49df-81ea-dfac8f43fe46",
+                        "9fb626c7-d673-4d1c-ac16-12745c4136cf",
+                        "3bcedd35-04fa-4854-b83a-e15c305780d8",
+                        "a242b5a5-3210-40f0-b083-5d206e7aeea3",
+                        "5550f389-f1bf-46e8-9087-b7f77d16efc8",
+                        "5e2df7a3-b314-47af-a9bb-76fd015e656d",
+                        "3537e02c-87a0-4901-a050-d21cdd46196d"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "bc777784",
+                      "type": "table",
+                      "name": "Scrap POD Request Line Items",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Scrapped Onsite (POD)"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Scrap POD Request",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/scrap_request_line_items.workato_db_table.json",
+                        "name": "Scrap Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "625e8d04-898d-4a4a-b7ae-65f44c04cc84",
+                      "visibleColumnsIds": [
+                        "8ad6de97-5529-42fa-aee3-cc2727725056",
+                        "8be3ad25-ec76-49df-81ea-dfac8f43fe46",
+                        "9fb626c7-d673-4d1c-ac16-12745c4136cf",
+                        "3bcedd35-04fa-4854-b83a-e15c305780d8",
+                        "a242b5a5-3210-40f0-b083-5d206e7aeea3",
+                        "5550f389-f1bf-46e8-9087-b7f77d16efc8",
+                        "fba18a2d-881f-4a23-ae09-1c94d83d0b4e",
+                        "3537e02c-87a0-4901-a050-d21cdd46196d"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "c961b560",
+                      "type": "table",
+                      "name": "Table 4",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "STSA Shipment Reversal"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "STSA Shipment Reversal",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/stsa_shipment_request_line_items.workato_db_table.json",
+                        "name": "STSA Shipment Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "086bad48-6a36-433a-aa78-124b13b58df1",
+                      "visibleColumnsIds": [
+                        "7fe2b322-0bc1-4d73-a158-d063bc120bde",
+                        "3c26a94b-2369-4561-89e8-8cfab5f3ddc6",
+                        "bcf7496c-0a85-460e-bf1a-a2b073bdce95",
+                        "a877787c-fb21-42ac-ad4a-692da95fb77c",
+                        "b40fa8ce-a1fd-44d3-94ef-6ad973a4534e"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "5a5a2935",
+                      "type": "table",
+                      "name": "Table 5",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Receipt Reversal"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Receipt Reversal",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/receipts_line_items.workato_db_table.json",
+                        "name": "Receipts Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "e9730a2a-d2f7-4605-9533-30fb7df244ce",
+                      "visibleColumnsIds": [
+                        "642d8ec6-fcf4-41b3-a760-e8a7bba7a6b0",
+                        "7667efae-81c7-473c-8b2b-85b1cb462ae5",
+                        "fa924685-a1d3-4d6a-8cba-f53a2f630a6a",
+                        "d74c4dc2-4091-4d75-a975-db75bbb021e7",
+                        "8becda1b-011f-457a-8aa5-2029dccb2a75"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "905e0205",
+                      "type": "table",
+                      "name": "Table 6",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Return to Vendor"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Return to Vendor",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/return_to_vendor_request_line_items.workato_db_table.json",
+                        "name": "Return to Vendor Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "769d7a33-e369-429f-92c6-d5b829f057b6",
+                      "visibleColumnsIds": [
+                        "0068573b-d09f-4783-91a7-acee7219656d",
+                        "8bf11c80-d971-4496-8b43-82773d2b98ab",
+                        "5e5cce5b-a5b5-4fbf-81bb-73358f0a7c23",
+                        "8f90e9a8-af70-4e2c-8ddf-3d6146b11c6e",
+                        "90f71abd-15ca-4815-b93c-23d5eab3bc77",
+                        "bbd21bd5-47fe-4ca9-9066-f6d8b8c75898",
+                        "eba841ea-30a5-4a4e-a004-f28c55d44409",
+                        "598ffd86-8b71-456b-aadc-2b20d6e00014",
+                        "638bf4fa-3ebf-4aee-9752-a26b34ec5e05",
+                        "5ad936b7-465f-4332-b008-0e58b959acb0"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "1d655117",
+                      "type": "table",
+                      "name": "Table 7",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Consumption Adjustment (Batch)"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Consumption Adjustment (Batch)",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/consumption_request_line_items.workato_db_table.json",
+                        "name": "Consumption Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "d96d174c-1559-433f-8ab3-b8e714a2e43f",
+                      "visibleColumnsIds": [
+                        "57b18332-861d-4dc4-ad51-3be14d3d5a4d",
+                        "12b8168d-7bc6-405d-99fb-5fd3e024b334",
+                        "ba9e41d3-e3fd-4bcb-8f29-a5addc154856",
+                        "d5b73e37-b686-4497-a097-5317d1735d4d",
+                        "3d127b76-33cc-4344-b874-cb46a9dda71d"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "159d8ddd",
+                      "type": "table",
+                      "name": "Table 8",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Rework"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Rework",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/rework_line_items.workato_db_table.json",
+                        "name": "Rework Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "ac03fc56-9c09-420e-9371-91569f83ab19",
+                      "visibleColumnsIds": [
+                        "aaa3f4f6-fc06-485f-ac89-0d0b93e7bc98",
+                        "2622e303-5152-4af0-9dc7-9f228aa5d3a4",
+                        "f443944e-7b2f-43af-af8b-a3c9168bf37c",
+                        "fced76c7-9ba3-48b9-96bb-e9f4e74f86e0",
+                        "06826b70-5f5a-4bcd-8c8b-6c9447b01fdb",
+                        "b2e435d3-a801-427c-9e28-c63eba36bede",
+                        "d17d6f56-9ad8-4ddf-832f-fb884f4626bc"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "82710216",
+                      "type": "table",
+                      "name": "Monthly Inventory Reconciliation Line Items",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          1,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Monthly Inventory Reconciliation"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Monthly Inventory Reconciliation Line Items",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/monthly_inventory_reconciliation_line_items.workato_db_table.json",
+                        "name": "Monthly Inventory Reconciliation Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "85bfec96-0b47-4301-88da-7685abedcc15",
+                      "visibleColumnsIds": [
+                        "d0ac70ec-041a-4f7b-8a77-0aaa9ac0ee75",
+                        "4c416826-d3a2-4db4-848f-3d660c50f56c",
+                        "08cbf0a6-28ac-4b55-93e6-b7b8ea4544f7",
+                        "51d2bbfb-7fb1-4301-b9b6-43c31b1196b7",
+                        "aa9e4ff5-864c-4539-8c30-c6dd084e70ee",
+                        "36de8489-2d4b-4151-a845-e8eb6dea57b7"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "a5fadc1d",
+                      "type": "table",
+                      "name": "STSA Shipment Request Line Items",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "STSA Shipment"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "STSA Shipment",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/stsa_shipment_request_line_items.workato_db_table.json",
+                        "name": "STSA Shipment Request Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "086bad48-6a36-433a-aa78-124b13b58df1",
+                      "visibleColumnsIds": [
+                        "b815e688-9df0-4167-a93b-adb77b240939",
+                        "c6737a75-8581-48ee-882c-e01286c77416",
+                        "bcf7496c-0a85-460e-bf1a-a2b073bdce95",
+                        "1bb2b120-2a05-4ca0-a8a3-0638c1235210",
+                        "6972676f-a88e-47a1-a099-1237607261e3",
+                        "a877787c-fb21-42ac-ad4a-692da95fb77c",
+                        "34e329ef-aa20-42b7-b473-dea2e6bb4618"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "d8f1f28c",
+                      "type": "table",
+                      "name": "Table 9",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Vendor Receipt"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Vendor Receipt",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/vendor_receipt_line_items.workato_db_table.json",
+                        "name": "Vendor Receipt Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "4931e354-9f10-4a10-9b6f-18de512ad5d8",
+                      "visibleColumnsIds": [
+                        "23d75496-fc36-473d-8dba-cea09e45ac8b",
+                        "4a6b7fc6-18a2-4553-a621-1ed109d4e972",
+                        "dbe41d9b-a67c-4bba-917c-659ea6fff94c",
+                        "df34c012-0636-4471-8efe-3b5ac87eb928",
+                        "1f5d568b-2807-419f-81a6-dd7a81b988be",
+                        "d6d2b32f-a39b-4306-983f-779a6b31cc79",
+                        "4f5c4a66-8e59-4467-82d3-3c9e5c69aa8c",
+                        "5fc287c8-325a-45b0-9527-992d48e6f3ed"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "d7f37c30",
+                      "type": "table",
+                      "name": "Usage Report Line Items",
+                      "x": 0,
+                      "width": 12,
+                      "visible": [
+                        1,
+                        [
+                          7,
+                          "#{_dp('{\"source\":\"widget\",\"id\":\"5b181eb1\",\"path\":[\"value\"]}')}",
+                          "Usage Report (RTCIS)"
+                        ]
+                      ],
+                      "editable": true,
+                      "title": "Usage Report (RTCIS)",
+                      "addRowButtonText": "Add record",
+                      "displayedRowsCount": 10,
+                      "tableId": {
+                        "zip_name": "Test Import/usage_report_line_items.workato_db_table.json",
+                        "name": "Usage Report Line Items",
+                        "folder": "Test Import"
+                      },
+                      "relatedColumnId": "5c1e240c-5716-444d-bedd-42e8ffa09594",
+                      "visibleColumnsIds": [
+                        "b075e94c-e173-4dbd-bde9-1aa834ae731d",
+                        "f753af02-cee6-4032-9665-263aa8e67696",
+                        "1c573216-caf7-482a-817d-770709893057",
+                        "f5530892-282b-40c8-99c8-dcef9fe5ee52",
+                        "b807791c-0489-436f-bd15-e787b6867448",
+                        "5ce2babb-daa9-4a55-b647-f05e9e292af5",
+                        "89565edb-a759-4381-a1f9-574ba5e45ec2",
+                        "f10ff721-4574-411c-9c14-802cba365431",
+                        "19f571d7-29d3-4a65-973a-71403d70ecd3",
+                        "a856f96d-4d34-49b9-aff8-2e5cb91ed23c"
+                      ],
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "f4a70061",
+                      "type": "button",
+                      "name": "Button",
+                      "x": 8,
+                      "width": 2,
+                      "visible": true,
+                      "label": "Validate",
+                      "style": "filled",
+                      "action": {
+                        "type": "complete-task",
+                        "status": "approved",
+                        "statusLabel": ""
+                      },
+                      "validations": {
+                      }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "id": "4616dc9c",
+                      "type": "button",
+                      "name": "Button 2",
+                      "x": 10,
+                      "width": 2,
+                      "visible": true,
+                      "label": "Cancel",
+                      "style": "filled",
+                      "action": {
+                        "type": "complete-task",
+                        "status": "rejected",
+                        "statusLabel": ""
+                      },
+                      "validations": {
+                      }
+                    },
+                    0
+                  ]
+                ],
+                "backgroundColor": "#ffffff",
+                "borderColor": "transparent",
+                "padding": "none",
+                "validations": {
+                }
+              },
+              1
+            ]
+          ],
+          "backgroundColor": "#ffffff",
+          "borderColor": "#ced5db",
+          "padding": "large",
+          "validations": {
+          }
+        },
+        1
+      ]
+    ],
+    "type": "common"
+  }
+}
